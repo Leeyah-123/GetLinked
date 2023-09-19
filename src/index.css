@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-navy-blue text-white;
+    @apply text-[100%] bg-navy-blue text-white;
   }
 }
 

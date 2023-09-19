@@ -1,5 +1,5 @@
-import logo from '../assets/getlinked.png'
-import { Button } from './Buttons'
+import logo from '../assets/getlinked.png';
+import { Button } from './Buttons';
 
 const Navbar = () => {
   return (
@@ -29,7 +29,7 @@ const Navbar = () => {
         <span className="md:hidden border border-slate-400 rounded-md p-2"></span>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
