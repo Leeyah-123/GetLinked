@@ -2,9 +2,9 @@ import logo from '../assets/getlinked.png'
 
 const Footer = () => {
   return (
-    <footer className="bg-muted-purple px-5 md:px-20 py-20 static bottom-0 w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-20 gap-x-[15%]">
+    <footer className="bg-muted-purple px-5 md:px-20 py-20 static bottom-0 w-full flex flex-wrap space-y-10">
       {/*  */}
-      <div className="space-y-20">
+      <div className="space-y-20 grow basis-96">
         <div className="space-y-5">
           <img src={logo} alt="" />
           <p className="">
@@ -14,14 +14,14 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="divide-x-4 divide-magenta grid grid-cols-2 text-center w-full mt-auto">
+        <div className="divide-x-4 divide-magenta grid grid-cols-2 text-center md:w-[80%] lg:w-[50%] mt-auto">
           <a href="/">Terms of Use</a>
           <a href="/">Privacy Policy</a>
         </div>
       </div>
 
       {/* Links */}
-      <div className="md:flex justify-center">
+      <div className="md:flex justify-center grow basis-96">
         <div>
           <p className="text-magenta text-lg font-medium mb-5">Useful Links</p>
           <ul className="space-y-3">
@@ -42,7 +42,7 @@ const Footer = () => {
       </div>
 
       {/* Contact Info */}
-      <div className="md:flex justify-center">
+      <div className="md:flex justify-center grow basis-96">
         <div>
           <p className="text-magenta text-lg font-medium mb-5">Contact Us</p>
           <ul>
