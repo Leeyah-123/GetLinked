@@ -6,6 +6,9 @@
   body {
     @apply text-[100%] bg-navy-blue text-white;
   }
+  a:hover {
+    @apply transition-colors text-magenta duration-300;
+  }
 }
 
 /* :root {
