@@ -17,6 +17,6 @@
 
 @layer components {
   .btn {
-    @apply px-10 py-3 rounded font-semibold bg-gradient-to-l from-[#903aff] via-[#d434fe] to-[#fe26b9];
+    @apply px-10 py-3 rounded font-[600] bg-gradient-to-l from-[#903aff] via-[#d434fe] to-[#fe26b9];
   }
 }

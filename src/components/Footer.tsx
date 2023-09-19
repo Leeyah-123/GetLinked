@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom'
-import logo from '../assets/getlinked.png'
-import { MdLocationOn, MdPhoneInTalk } from 'react-icons/md'
+import { Link } from 'react-router-dom';
+import { MdLocationOn, MdPhoneInTalk } from 'react-icons/md';
+import Logo from './Logo';
 
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
       {/*  */}
       <div className="space-y-20 grow basis-96">
         <div className="space-y-5">
-          <img src={logo} alt="GetLinked logo" />
+          <Logo />
 
           <p className="">
             Getlinked Tech Hackathon is a technology innovation program
