@@ -24,9 +24,9 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <Button className="px-10 py-3">
-            <Link to="/register">Register</Link>
-          </Button>
+          <Link to="/register">
+            <Button className="px-10 py-3">Register</Button>
+          </Link>
         </div>
 
         <span className="md:hidden border border-slate-400 rounded-md p-2"></span>
