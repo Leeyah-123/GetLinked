@@ -8,11 +8,12 @@ const Footer = () => {
       {/*  */}
       <div className="space-y-20 grow basis-96">
         <div className="space-y-5">
-          <img src={logo} alt="" />
+          <img src={logo} alt="GetLinked logo" />
+
           <p className="">
-            Getlinked Tech Hackathon is a technology innovation program established by a
-            group of organizations with the aim of showcasing young and talented
-            individuals in the field of technology.
+            Getlinked Tech Hackathon is a technology innovation program
+            established by a group of organizations with the aim of showcasing
+            young and talented individuals in the field of technology.
           </p>
         </div>
 
@@ -28,16 +29,16 @@ const Footer = () => {
           <p className="text-magenta text-lg mb-5">Useful Links</p>
           <ul className="space-y-3">
             <li>
-              <Link to="">Overview</Link>
+              <Link to="/#overview">Overview</Link>
             </li>
             <li>
-              <Link to="">Timeline</Link>
+              <Link to="/#timeline">Timeline</Link>
             </li>
             <li>
-              <Link to="">FAQs</Link>
+              <Link to="/#faqs">FAQs</Link>
             </li>
             <li>
-              <Link to="">Register</Link>
+              <Link to="/register">Register</Link>
             </li>
           </ul>
         </div>
@@ -69,7 +70,7 @@ const Footer = () => {
         All rights reserved.&copy; getLinked Ltd
       </p>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
