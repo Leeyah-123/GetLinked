@@ -3,6 +3,7 @@ import Logo from './Logo';
 
 const Navbar = () => {
   const { pathname } = useLocation();
+  const isRegisterRoute = pathname == '/register';
 
   return (
     <nav className="py-12  px-5 md:px-10 lg:px-20 flex items-center">
@@ -31,11 +32,11 @@ const Navbar = () => {
             id="navBtn"
             to="/register"
             className={`relative ${
-              pathname == '/register' && 'bg-none bg-navy-blue'
+              isRegisterRoute && 'bg-none bg-navy-blue'
             } btn transition-transform hover:scale-[1.05] focus:scale-[1.05]`}
           >
             <span className="relative z-20">Register</span>
-            {pathname == '/register' && (
+            {isRegisterRoute && (
               <>
                 <span className="absolute inset-0 z-10 bg-navy-blue rounded-md"></span>
                 <span className="absolute -inset-0.5 bg-gradient-to-b from-[#9A39FF] to-[#FF29B9] border-transparent rounded-md"></span>
