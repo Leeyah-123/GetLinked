@@ -21,7 +21,7 @@ const Footer = () => {
       </div>
 
       {/* Links */}
-      <div className="flex justify-center">
+      <div className="md:flex justify-center">
         <div>
           <p className="text-magenta text-lg font-medium mb-5">Useful Links</p>
           <ul className="space-y-3">
@@ -42,7 +42,7 @@ const Footer = () => {
       </div>
 
       {/* Contact Info */}
-      <div className="flex justify-center">
+      <div className="md:flex justify-center">
         <div>
           <p className="text-magenta text-lg font-medium mb-5">Contact Us</p>
           <ul>
