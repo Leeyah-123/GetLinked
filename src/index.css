@@ -12,8 +12,8 @@
   a:not(> button):hover {
     @apply transition-colors text-magenta/70 duration-300;
   }
-  a:active,
-  a:focus {
+  a:not(> button):active,
+  a:not(> button):focus {
     @apply transition-colors text-dark-purple;
   }
 }
