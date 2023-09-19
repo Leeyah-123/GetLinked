@@ -28,13 +28,13 @@ const Footer = () => {
           <p className="text-magenta text-lg font-medium mb-5">Useful Links</p>
           <ul className="space-y-3">
             <li>
-              <Link to="#overview">Overview</Link>
+              <Link to="/#overview">Overview</Link>
             </li>
             <li>
-              <Link to="#timeline">Timeline</Link>
+              <Link to="/#timeline">Timeline</Link>
             </li>
             <li>
-              <Link to="#faqs">FAQs</Link>
+              <Link to="/#faqs">FAQs</Link>
             </li>
             <li>
               <Link to="/register">Register</Link>

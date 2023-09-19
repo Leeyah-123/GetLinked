@@ -11,13 +11,13 @@ const Navbar = () => {
         <div className="space-x-32 hidden md:flex items-center">
           <ul className="inline-flex space-x-5 capitalize">
             <li>
-              <Link to="#timeline">timeline</Link>
+              <Link to="/#timeline">timeline</Link>
             </li>
             <li>
-              <Link to="#overview">overview</Link>
+              <Link to="/#overview">overview</Link>
             </li>
             <li>
-              <Link to="#faqs">faqs</Link>
+              <Link to="/#faqs">faqs</Link>
             </li>
             <li>
               <Link to="/contact">contact</Link>
