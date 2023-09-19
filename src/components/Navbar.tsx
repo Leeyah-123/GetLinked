@@ -1,6 +1,5 @@
-import { Link } from 'react-router-dom'
-import logo from '../assets/getlinked.png'
-import { Button } from './Buttons'
+import { Link } from 'react-router-dom';
+import logo from '../assets/getlinked.png';
 
 const Navbar = () => {
   return (
@@ -24,15 +23,19 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <Link to="/register">
-            <Button className="px-10 py-3">Register</Button>
+          <Link
+            id="navBtn"
+            to="/register"
+            className="btn transition-transform hover:scale-[1.05] focus:scale-50"
+          >
+            Register
           </Link>
         </div>
 
         <span className="md:hidden border border-slate-400 rounded-md p-2"></span>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
