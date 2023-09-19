@@ -8,7 +8,8 @@
   body {
     @apply font-["Montserrat",sans-serif] bg-navy-blue text-white;
   }
-  a:hover {
+  /* :not(> button) ensures that the color transition does not apply to links inside a button*/
+  a:not(> button):hover {
     @apply transition-colors text-magenta/70 duration-300;
   }
 }

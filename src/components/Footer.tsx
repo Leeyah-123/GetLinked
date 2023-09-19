@@ -1,4 +1,5 @@
-import logo from '../assets/getlinked.png'
+import { Link } from 'react-router-dom';
+import logo from '../assets/getlinked.png';
 
 const Footer = () => {
   return (
@@ -6,17 +7,18 @@ const Footer = () => {
       {/*  */}
       <div className="space-y-20 grow basis-96">
         <div className="space-y-5">
-          <img src={logo} alt="" />
+          <img src={logo} alt="GetLinked logo" />
+
           <p className="">
-            Getlinked Tech Hackathon is a technology innovation program established by a
-            group of organizations with the aim of showcasing young and talented
-            individuals in the field of technology.
+            Getlinked Tech Hackathon is a technology innovation program
+            established by a group of organizations with the aim of showcasing
+            young and talented individuals in the field of technology.
           </p>
         </div>
 
         <div className="divide-x-4 divide-magenta grid grid-cols-2 text-center md:w-[80%] lg:w-[50%] mt-auto">
-          <a href="/">Terms of Use</a>
-          <a href="/">Privacy Policy</a>
+          <Link to="/">Terms of Use</Link>
+          <Link to="/">Privacy Policy</Link>
         </div>
       </div>
 
@@ -26,16 +28,16 @@ const Footer = () => {
           <p className="text-magenta text-lg font-medium mb-5">Useful Links</p>
           <ul className="space-y-3">
             <li>
-              <a href="">Overview</a>
+              <Link to="#overview">Overview</Link>
             </li>
             <li>
-              <a href="">Timeline</a>
+              <Link to="#timeline">Timeline</Link>
             </li>
             <li>
-              <a href="">FAQs</a>
+              <Link to="#faqs">FAQs</Link>
             </li>
             <li>
-              <a href="">Register</a>
+              <Link to="/register">Register</Link>
             </li>
           </ul>
         </div>
@@ -51,7 +53,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
