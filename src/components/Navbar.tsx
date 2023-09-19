@@ -1,9 +1,11 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Logo from './Logo';
 
 const Navbar = () => {
+  const { pathname } = useLocation();
+
   return (
-    <nav className="py-12 border-b border-b-slate-400 px-5 md:px-10 lg:px-20 flex items-center">
+    <nav className="py-12  px-5 md:px-10 lg:px-20 flex items-center">
       <Link to="/">
         <Logo />
       </Link>
@@ -28,9 +30,17 @@ const Navbar = () => {
           <Link
             id="navBtn"
             to="/register"
-            className="btn transition-transform hover:scale-[1.05] focus:scale-[1.05]"
+            className={`relative ${
+              pathname == '/register' && 'bg-none bg-navy-blue'
+            } btn transition-transform hover:scale-[1.05] focus:scale-[1.05]`}
           >
-            Register
+            <span className="relative z-20">Register</span>
+            {pathname == '/register' && (
+              <>
+                <span className="absolute inset-0 z-10 bg-navy-blue rounded-md"></span>
+                <span className="absolute -inset-0.5 bg-gradient-to-b from-[#9A39FF] to-[#FF29B9] border-transparent rounded-md"></span>
+              </>
+            )}
           </Link>
         </div>
 
