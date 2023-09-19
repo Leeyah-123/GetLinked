@@ -6,6 +6,9 @@
   body {
     @apply bg-navy-blue text-white;
   }
+  a:hover {
+    @apply transition-colors text-magenta duration-300;
+  }
 }
 
 /* :root {
