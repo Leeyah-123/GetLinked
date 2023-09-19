@@ -9,6 +9,10 @@
     @apply font-["Montserrat",sans-serif] bg-navy-blue text-white;
   }
   a:hover {
-    @apply transition-colors text-magenta/70 duration-300;
+    @apply transition-colors text-magenta/50 duration-300;
+  }
+  a:active,
+  a:focus {
+    @apply transition-colors text-dark-purple;
   }
 }

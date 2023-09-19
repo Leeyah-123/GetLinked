@@ -1,5 +1,6 @@
-import logo from '../assets/getlinked.png';
-import { Button } from './Buttons';
+import { Link } from 'react-router-dom'
+import logo from '../assets/getlinked.png'
+import { Button } from './Buttons'
 
 const Navbar = () => {
   return (
@@ -10,16 +11,16 @@ const Navbar = () => {
         <div className="space-x-32 hidden md:flex items-center">
           <ul className="inline-flex space-x-5 capitalize">
             <li>
-              <a href="#timeline">timeline</a>
+              <Link to="#timeline">timeline</Link>
             </li>
             <li>
-              <a href="#overview">overview</a>
+              <Link to="#overview">overview</Link>
             </li>
             <li>
-              <a href="#faqs">FAQs</a>
+              <Link to="#faqs">FAQs</Link>
             </li>
             <li>
-              <a href="">Contact</a>
+              <Link to="">Contact</Link>
             </li>
           </ul>
 
@@ -29,7 +30,7 @@ const Navbar = () => {
         <span className="md:hidden border border-slate-400 rounded-md p-2"></span>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
