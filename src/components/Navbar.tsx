@@ -1,11 +1,34 @@
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import Logo from './Logo';
+import { useEffect, useState } from 'react';
 
 const Navbar = () => {
   const location = useLocation();
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="fixed top-0 right-0 left-0 py-12 px-5 md:px-10 lg:px-20 flex items-center">
+    <nav
+      className={`fixed top-0 right-0 left-0 py-12 px-5 md:px-10 lg:px-20 flex items-center z-10 ${
+        isScrolled && 'backdrop-blur-sm'
+      }`}
+    >
       <Link to="/">
         <Logo />
       </Link>
