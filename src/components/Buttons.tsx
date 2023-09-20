@@ -11,7 +11,7 @@ export const Button = ({ children, className }: ButtonType) => {
     <motion.button
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className={`bg-gradient-to-r from-magenta to-dark-purple rounded ${className}`}
+      className={`bg-gradient-to-r from-pink-500 via-magenta to-dark-purple rounded ${className}`}
     >
       {children}
     </motion.button>

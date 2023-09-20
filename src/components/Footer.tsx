@@ -4,16 +4,16 @@ import { MdLocationOn, MdPhoneInTalk } from 'react-icons/md'
 
 const Footer = () => {
   return (
-    <footer className="bg-muted-purple px-5 md:px-20 py-20 fixed bottom-0 w-full flex flex-wrap space-y-10 font-semibold">
+    <footer className="bg-muted-purple px-5 md:px-20 py-20 w-full flex items-start flex-wrap space-y-10 font-semibold">
       {/*  */}
-      <div className="space-y-20 grow basis-96">
+      <div className="space-y-20 grow basis-80">
         <div className="space-y-5">
           <img src={logo} alt="GetLinked logo" />
 
           <p className="">
-            Getlinked Tech Hackathon is a technology innovation program
-            established by a group of organizations with the aim of showcasing
-            young and talented individuals in the field of technology.
+            Getlinked Tech Hackathon is a technology innovation program established by a
+            group of organizations with the aim of showcasing young and talented
+            individuals in the field of technology.
           </p>
         </div>
 
@@ -70,7 +70,7 @@ const Footer = () => {
         All rights reserved.&copy; getLinked Ltd
       </p>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

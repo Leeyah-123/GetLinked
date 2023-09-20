@@ -4,7 +4,7 @@ import { Button } from './Buttons'
 
 const Navbar = () => {
   return (
-    <nav className="py-12 border-b border-b-slate-400 px-5 md:px-10 lg:px-20 flex items-center">
+    <nav className="py-12 border-b border-b-slate-700 px-5 md:px-10 lg:px-20 flex items-center">
       <img src={logo} alt="GetLinked Logo" className="" />
 
       <div className="ml-auto">
