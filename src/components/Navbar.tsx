@@ -27,7 +27,7 @@ const Navbar = () => {
     <nav
       className={`${
         location.pathname !== '/' && 'hidden'
-      } lg:flex fixed top-0 right-0 left-0 pt-12 pb-3 px-5 md:px-10 lg:px-20 items-center z-10 ${
+      } lg:flex top-0 right-0 left-0 pt-12 pb-3 px-5 md:px-10 lg:px-20 items-center z-10 ${
         isScrolled && 'backdrop-blur-sm'
       }`}
     >
@@ -68,6 +68,7 @@ const Navbar = () => {
           </ul>
 
           <NavLink
+            id="registerBtn"
             to="/register"
             className={({ isActive }) =>
               `btn relative transition-transform hover:scale-[1.05] focus:scale-[1.05] ${

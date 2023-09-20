@@ -16,7 +16,7 @@ const Contact = () => {
 
       <div
         id="contact"
-        className="relative min-h-screen px-[10vw] lg:grid lg:grid-cols-3 lg:grid-flow-col lg:py-40"
+        className="relative min-h-screen px-[10vw] lg:grid lg:grid-cols-3 lg:grid-flow-col lg:pt-10 lg:pb-40"
       >
         <section className="col-span-1 my-10 py-10 hidden lg:block">
           <h1 className="text-3xl text-[var(--color-3)] clash-display font-black tracking-wide mb-3">
