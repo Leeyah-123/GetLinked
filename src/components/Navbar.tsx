@@ -1,6 +1,6 @@
+import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import Logo from './Logo';
-import { useEffect, useState } from 'react';
 
 const Navbar = () => {
   const location = useLocation();
@@ -25,7 +25,9 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 right-0 left-0 py-12 px-5 md:px-10 lg:px-20 flex items-center z-10 ${
+      className={`${
+        location.pathname !== '/' && 'hidden'
+      } lg:flex fixed top-0 right-0 left-0 pt-12 pb-3 px-5 md:px-10 lg:px-20 items-center z-10 ${
         isScrolled && 'backdrop-blur-sm'
       }`}
     >
@@ -66,7 +68,6 @@ const Navbar = () => {
           </ul>
 
           <NavLink
-            id="registerBtn"
             to="/register"
             className={({ isActive }) =>
               `btn relative transition-transform hover:scale-[1.05] focus:scale-[1.05] ${
