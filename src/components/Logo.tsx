@@ -1,4 +1,4 @@
-import logo from '../assets/getlinked.png';
+import logo from '../assets/images/getlinked.png';
 
 const Logo = () => {
   return <img src={logo} alt="GetLinked Logo" />;

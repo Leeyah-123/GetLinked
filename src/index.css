@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,6 +9,17 @@
   --color-1: #903aff;
   --color-2: #ff26b9;
   --color-3: #d434fe;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: ClashDisplay;
+  src: url(assets/fonts/ClashDisplay/Fonts/WEB/fonts/ClashDisplay-Bold.woff);
 }
 
 @layer base {
@@ -31,5 +42,8 @@
   }
   #registerBtn.active::after {
     @apply content-[''] absolute inset-0 bg-gradient-to-b from-[var(--color-1)] to-[var(--color-2)] border-transparent rounded-md;
+  }
+  .clash-display {
+    @apply font-[ClashDisplay];
   }
 }

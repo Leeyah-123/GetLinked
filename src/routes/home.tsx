@@ -1,8 +1,8 @@
-import { Button } from '../components/Buttons'
-import curve from '../assets/Vector 4.png'
-import guy from '../assets/virtual.png'
-import spark from '../assets/Image 1.png'
-import Introduction from '../sections/Introduction'
+import spark from '../assets/images/Image 1.png';
+import curve from '../assets/images/Vector 4.png';
+import guy from '../assets/images/virtual.png';
+import { Button } from '../components/Buttons';
+import Introduction from '../sections/Introduction';
 
 const Home = () => {
   return (
@@ -19,11 +19,12 @@ const Home = () => {
           <div>
             <div className="space-y-6 max-w-fit bg-auto mt-auto">
               <p className="text-5xl font-semibold md:text-8xl mt-20">
-                getLinked Tech <br /> Hackathon <span className="text-magenta">1.0</span>
+                getLinked Tech <br /> Hackathon{' '}
+                <span className="text-magenta">1.0</span>
               </p>
               <p className="font-semibold">
-                Participate in getlinked tech Hackathon 2023 stand a chance to win a Big
-                prize
+                Participate in getlinked tech Hackathon 2023 stand a chance to
+                win a Big prize
               </p>
 
               <Button className="px-10 py-3">Register</Button>
@@ -43,7 +44,12 @@ const Home = () => {
           </div>
 
           <div className="relative">
-            <img draggable={false} src={guy} alt="" className="sm:static opacity-70" />
+            <img
+              draggable={false}
+              src={guy}
+              alt=""
+              className="sm:static opacity-70"
+            />
             <img
               draggable={false}
               src={spark}
@@ -56,7 +62,7 @@ const Home = () => {
 
       <Introduction />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

@@ -5,7 +5,7 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="py-12  px-5 md:px-10 lg:px-20 flex items-center">
+    <nav className="fixed top-0 right-0 left-0 py-12 px-5 md:px-10 lg:px-20 flex items-center">
       <Link to="/">
         <Logo />
       </Link>

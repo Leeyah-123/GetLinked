@@ -1,4 +1,4 @@
-import bigIdea from '../assets/The big idea.png'
+import bigIdea from '../assets/images/The big idea.png'
 
 const Introduction = () => {
   return (

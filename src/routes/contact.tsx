@@ -5,72 +5,124 @@ import {
   RiTwitterXLine,
 } from 'react-icons/ri';
 
+import flare from '../assets/images/flare.svg';
+import flare2 from '../assets/images/contact/flare2.svg';
+
 const Contact = () => {
   return (
-    <div id="contact" className="min-h-screen">
-      <section>
-        <h1>Get in touch</h1>
-        <h2>Contact Information</h2>
+    <div
+      id="contact"
+      className="relative min-h-screen grid grid-cols-3 grid-flow-row lg:grid-flow-col py-40 px-40"
+    >
+      <section className="col-span-1 my-10 py-10">
+        <h1 className="text-3xl text-[var(--color-3)] clash-display font-black tracking-wide mb-3">
+          Get in touch
+        </h1>
 
-        <address>
-          <span>27, Alare Street</span>
-          <span>Yaba 100012</span>
-          <span>Lagos State</span>
-        </address>
+        <div className="flex flex-col gap-3 text-lg">
+          <h2 className="font-medium max-w-[7ch]">Contact Information</h2>
 
-        <p>Call Us : 07067981819</p>
-        <p>We are open from Monday-Friday 08:00am - 05:00pm</p>
+          <address className="font-medium not-italic">
+            <span className="block">27,Alare Street</span>
+            <span className="block">Yaba 100012</span>
+            <span className="block">Lagos State</span>
+          </address>
 
-        <div>
-          <p>Share on</p>
-          <ul>
-            <li>
-              <a href="#">
+          <p className="font-light mb-2">Call Us : 07067981819</p>
+          <p className="font-light">
+            we are open from Monday-Friday 08:00am - 05:00pm
+          </p>
+        </div>
+
+        <div className="text-lg mt-10 flex flex-col gap-3">
+          <p className="text-[var(--color-3)] font-medium">Share on</p>
+          <ul className="flex gap-3 text-xl">
+            <li className="transition-all hover:scale-[1.2] focus-within:scale-[1.2]">
+              <a
+                href="#"
+                className="hover:!bg-none hover:!text-[var(--color-2)] focus:!bg-none focus:!text-[var(--color-2)]"
+              >
                 <RiInstagramLine />
               </a>
             </li>
-            <li>
-              <a href="#">
+            <li className="transition-all hover:scale-[1.2] focus-within:scale-[1.2]">
+              <a
+                href="#"
+                className="hover:!bg-none hover:!text-[var(--color-2)] focus:!bg-none focus:!text-[var(--color-2)]"
+              >
                 <RiTwitterXLine />
               </a>
             </li>
-            <li>
-              <a href="#">
+            <li className="transition-all hover:scale-[1.2] focus-within:scale-[1.2]">
+              <a
+                href="#"
+                className="hover:!bg-none hover:!text-[var(--color-2)] focus:!bg-none focus:!text-[var(--color-2)]"
+              >
                 <RiFacebookFill />
               </a>
             </li>
-            <li>
-              <a href="#">
+            <li className="transition-all hover:scale-[1.2] focus-within:scale-[1.2]">
+              <a
+                href="#"
+                className="hover:!bg-none hover:!text-[var(--color-2)] focus:!bg-none focus:!text-[var(--color-2)]"
+              >
                 <RiLinkedinFill />
               </a>
             </li>
           </ul>
         </div>
       </section>
-      <section>
-        <div>
+      <section className="col-span-3 shadow-[#0f0f0f] shadow-md rounded-xl ml-28 py-16 px-24 bg-white/[0.03]">
+        <div className="text-xl text-[var(--color-3)] clash-display font-semibold tracking-wide mb-8">
           <h2>Questions or need assistance?</h2>
           <p>Let us know about it!</p>
         </div>
-        <div>Email us below to any question related to our event</div>
-        <form>
+        <div className="lg:hidden">
+          Email us below to any question related to our event
+        </div>
+        <form className="flex flex-col gap-10">
           <input
             type="text"
             name="firstName"
             id="firstName"
             placeholder="First Name"
+            className="rounded-md bg-transparent text-white placeholder:text-white placeholder:font-medium outline outline-1 outline-white px-5 p-2"
           />
-          <input type="text" name="mail" id="mail" placeholder="Mail" />
+          <input
+            type="text"
+            name="mail"
+            id="mail"
+            placeholder="Mail"
+            className="rounded-md bg-transparent text-white placeholder:text-white placeholder:font-medium outline outline-1 outline-white px-5 p-2"
+          />
           <textarea
             name="message"
             id="message"
-            cols={30}
-            rows={10}
+            cols={3}
+            rows={3}
             placeholder="Message"
+            className="rounded-md bg-transparent text-white placeholder:text-white placeholder:font-medium outline outline-1 outline-white px-5 py-2"
           />
-          <button type="submit">Submit</button>
+          <button type="submit" className="btn self-center">
+            Submit
+          </button>
         </form>
       </section>
+
+      <div>
+        <img
+          src={flare}
+          alt=""
+          className="absolute -top-20 -left-2 -z-10"
+          style={{ filter: 'brightness(70%)' }}
+        />
+        <img
+          src={flare2}
+          alt=""
+          className="absolute bottom-0 right-0 -z-50"
+          style={{ filter: 'brightness(70%)' }}
+        />
+      </div>
     </div>
   );
 };
