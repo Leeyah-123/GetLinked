@@ -38,8 +38,8 @@ const Navbar = () => {
             <span className="relative z-20">Register</span>
             {isRegisterRoute && (
               <>
-                <span className="absolute inset-0 z-10 bg-navy-blue rounded-md"></span>
-                <span className="absolute -inset-0.5 bg-gradient-to-b from-[#9A39FF] to-[#FF29B9] border-transparent rounded-md"></span>
+                <span className="absolute inset-0.5 z-10 bg-navy-blue rounded-md"></span>
+                <span className="absolute inset-0 bg-gradient-to-b from-[#9A39FF] to-[#FF29B9] border-transparent rounded-md"></span>
               </>
             )}
           </Link>
