@@ -8,12 +8,15 @@
   body {
     @apply font-["Montserrat",sans-serif] bg-navy-blue text-white;
   }
-  /* :not(> button) ensures that the color transition does not apply to links inside a button*/
-  a:not(> button):hover {
-    @apply transition-colors text-magenta/70 duration-300;
+  a:not(#navBtn):hover,
+  a:not(#navBtn):active,
+  a:not(#navBtn):focus {
+    @apply transition-colors duration-300 bg-gradient-to-r from-[#903AFF] to-[#FF26B9] text-transparent bg-clip-text;
   }
-  a:active,
-  a:focus {
-    @apply transition-colors text-dark-purple;
+}
+
+@layer components {
+  .btn {
+    @apply px-10 py-3 rounded font-[600] bg-gradient-to-l from-[#903aff] via-[#d434fe] to-[#fe26b9];
   }
 }

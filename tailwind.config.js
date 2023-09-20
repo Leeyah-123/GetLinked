@@ -9,6 +9,9 @@ export default {
         'navy-blue': '#150e28',
         'muted-purple': '#100B20',
       },
+      backgroundImage: {
+        header_image: 'url("./src/assets/virtua;.png")',
+      },
     },
   },
   plugins: [],
