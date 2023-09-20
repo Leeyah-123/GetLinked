@@ -2,7 +2,9 @@ import spark from '../assets/images/Image 1.png';
 import curve from '../assets/images/Vector 4.png';
 import guy from '../assets/images/virtual.png';
 import { Button } from '../components/Buttons';
+import Criteria from '../sections/Criteria';
 import Introduction from '../sections/Introduction';
+import RulesAndGuide from '../sections/RulesAndGuide';
 
 const Home = () => {
   return (
@@ -60,7 +62,14 @@ const Home = () => {
         </div>
       </section>
 
+      {/*  */}
       <Introduction />
+
+      {/*  */}
+      <RulesAndGuide />
+
+      {/*  */}
+      <Criteria />
     </>
   );
 };
