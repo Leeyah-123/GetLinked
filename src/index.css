@@ -19,10 +19,10 @@
   .btn {
     @apply px-10 py-3 rounded font-[600] bg-gradient-to-l from-[#903aff] via-[#d434fe] to-[#fe26b9];
   }
-  #navBtn.active {
-    @apply before:content-[''] before:absolute before:inset-0.5 before:z-10 before:bg-navy-blue before:rounded-md;
+  #navBtn.active::before {
+    @apply content-[''] absolute inset-0.5 z-10 bg-navy-blue rounded-md;
   }
-  #navBtn.active {
-    @apply after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-b after:from-[#9A39FF] after:to-[#FF29B9] after:border-transparent after:rounded-md;
+  #navBtn.active::after {
+    @apply content-[''] absolute inset-0 bg-gradient-to-b from-[#9A39FF] to-[#FF29B9] border-transparent rounded-md;
   }
 }
