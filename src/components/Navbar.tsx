@@ -43,11 +43,11 @@ const Navbar = () => {
           </ul>
 
           <NavLink
-            id="navBtn"
+            id="registerBtn"
             to="/register"
             className={({ isActive }) =>
               `btn relative transition-transform hover:scale-[1.05] focus:scale-[1.05] ${
-                isActive && 'active bg-none bg-navy-blue'
+                isActive && 'active bg-none bg-[var(--navy-blue)]'
               }`
             }
           >

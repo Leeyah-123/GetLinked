@@ -1,23 +1,23 @@
-import { Link } from 'react-router-dom';
 import { MdLocationOn, MdPhoneInTalk } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 import Logo from './Logo';
 
 const Footer = () => {
   return (
-    <footer className="bg-muted-purple px-5 md:px-20 py-20 w-full flex items-start flex-wrap space-y-10 font-semibold">
+    <footer className="bg-[#100B20] px-5 md:px-20 py-20 w-full flex items-start flex-wrap space-y-10 font-semibold">
       {/*  */}
       <div className="space-y-20 grow basis-80">
         <div className="space-y-5">
           <Logo />
 
           <p className="">
-            Getlinked Tech Hackathon is a technology innovation program established by a
-            group of organizations with the aim of showcasing young and talented
-            individuals in the field of technology.
+            Getlinked Tech Hackathon is a technology innovation program
+            established by a group of organizations with the aim of showcasing
+            young and talented individuals in the field of technology.
           </p>
         </div>
 
-        <div className="divide-x-4 divide-magenta grid grid-cols-2 text-center md:w-[80%] lg:w-[50%] mt-auto">
+        <div className="divide-x-4 divide-[var(--color-3)] text-[var(--color-3)] grid grid-cols-2 text-center md:w-[80%] lg:w-[50%] mt-auto">
           <Link to="/">Terms of Use</Link>
           <Link to="/">Privacy Policy</Link>
         </div>
@@ -26,7 +26,7 @@ const Footer = () => {
       {/* Links */}
       <div className="md:flex justify-center grow basis-60">
         <div>
-          <p className="text-magenta text-lg mb-5">Useful Links</p>
+          <p className="text-[var(--color-3)] text-lg mb-5">Useful Links</p>
           <ul className="space-y-3">
             <li>
               <Link to="/#overview">Overview</Link>
@@ -47,7 +47,7 @@ const Footer = () => {
       {/* Contact Info */}
       <div className="md:flex justify-center grow basis-60">
         <div>
-          <p className="text-magenta text-lg mb-5">Contact Us</p>
+          <p className="text-[var(--color-3)] text-lg mb-5">Contact Us</p>
           <ul className="space-y-3">
             <li className="flex items-start space-x-5">
               <MdPhoneInTalk size={25} />
@@ -70,7 +70,7 @@ const Footer = () => {
         All rights reserved.&copy; getLinked Ltd
       </p>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
