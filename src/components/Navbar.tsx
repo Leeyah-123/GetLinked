@@ -27,7 +27,7 @@ const Navbar = () => {
     <nav
       className={`${
         location.pathname !== '/' && 'hidden'
-      } lg:flex top-0 right-0 left-0 pt-12 pb-3 px-5 md:px-10 lg:px-20 items-center z-10 ${
+      } lg:flex top-0 right-0 left-0 py-12 px-5 md:px-10 lg:px-20 items-center z-10 ${
         isScrolled && 'backdrop-blur-sm'
       }`}
     >

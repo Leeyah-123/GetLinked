@@ -21,10 +21,10 @@ const Register = () => {
         <img
           src={graphicDesignerImg}
           alt="A graphic designer at his desk"
-          className="w-[40vw] aspect-square lg:w-full lg:pb-32"
+          className="w-[40vw] max-w-none aspect-square md:w-[50vw] lg:pb-32 -ml-11"
         />
 
-        <div className="mb-2 rounded-xl px-[9vw] py-[7vh] md:px-[5vw] md:py-[3vh] lg:mt-5 lg:shadow-[#0f0f0f] lg:shadow-md lg:bg-white/[0.03] lg:h-[80vh] xl:max-h-[75vh] xl:py-[7vh]">
+        <div className="mb-2 h-fit rounded-xl px-[9vw] py-[7vh] md:px-[5vw] md:py-[3vh] lg:mt-5 lg:shadow-[#0f0f0f] lg:shadow-md lg:bg-white/[0.03] xl:max-h-[75vh] xl:py-[7vh]">
           <h1 className="hidden lg:block text-2xl text-[var(--color-3)] clash-display font-medium tracking-wide mb-4 lg:mb-8">
             Register
           </h1>
