@@ -10,15 +10,18 @@ const Register = () => {
       id="contact"
       className="relative min-h-[100dvh] min-h-[100vh] pt-[15vh] flex flex-col items-center lg:items-stretch lg:grid lg:grid-cols-2 lg:grid-flow-col lg:pr-20"
     >
-      <div>
-        <img
-          src={graphicDesignerImg}
-          alt="A graphic designer at his desk"
-          className="h-[20vh] max-w-[80vw] lg:!max-w-none lg:h-[90%]"
-        />
-      </div>
-      <div className="rounded-xl px-[5vw] py-[7vh] lg:mt-5 lg:max-h-[75vh] lg:shadow-[#0f0f0f] lg:shadow-md lg:bg-white/[0.03]">
-        <h1 className="text-2xl text-[var(--color-3)] clash-display font-medium tracking-wide mb-4 lg:mb-8">
+      <h1 className="px-[9vw] md:px-[20vw] self-start text-xl text-[var(--color-3)] clash-display font-medium tracking-wide lg:hidden">
+        Register
+      </h1>
+
+      <img
+        src={graphicDesignerImg}
+        alt="A graphic designer at his desk"
+        className="w-[40vw] lg:!max-w-none lg:h-[90%]"
+      />
+
+      <div className="rounded-xl px-[9vw] py-[7vh] md:px-[5vw] md:py-[3vh] lg:mt-5 lg:shadow-[#0f0f0f] lg:shadow-md lg:bg-white/[0.03] lg:max-h-[80vh] xl:max-h-[75vh] xl:py-[7vh]">
+        <h1 className="hidden lg:block text-2xl text-[var(--color-3)] clash-display font-medium tracking-wide mb-4 lg:mb-8">
           Register
         </h1>
 
@@ -47,7 +50,7 @@ const Register = () => {
             Create your account
           </header>
 
-          <div className="grid grid-cols-2 grid-rows-3 gap-5">
+          <div className="grid lg:grid-cols-2 lg:grid-rows-3 gap-5">
             <div>
               <label htmlFor="teamName" className="text-sm font-medium">
                 Team's Name
@@ -172,7 +175,7 @@ const Register = () => {
                 I agreed with the event terms and conditions and privacy policy
               </span>
             </label>
-            <button type="submit" className="btn">
+            <button type="submit" className="btn self-center lg:self-auto">
               Register Now
             </button>
           </div>
