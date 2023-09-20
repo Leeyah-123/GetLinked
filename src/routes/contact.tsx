@@ -16,9 +16,9 @@ const Contact = () => {
 
       <div
         id="contact"
-        className="relative min-h-screen px-[10vw] lg:grid lg:grid-cols-3 lg:grid-flow-col lg:pt-10 lg:pb-40"
+        className="relative px-[10vw] lg:min-h-screen lg:grid lg:grid-cols-2 lg:grid-flow-col lg:pt-10 lg:pb-40"
       >
-        <section className="col-span-1 my-10 py-10 hidden lg:block">
+        <section className="my-10 hidden lg:block">
           <h1 className="text-3xl text-[var(--color-3)] clash-display font-black tracking-wide mb-3">
             Get in touch
           </h1>
@@ -33,7 +33,7 @@ const Contact = () => {
             </address>
 
             <p className="font-light mb-2">Call Us : 07067981819</p>
-            <p className="font-light">
+            <p className="font-light max-w-[30ch]">
               we are open from Monday-Friday 08:00am - 05:00pm
             </p>
           </div>
@@ -77,8 +77,8 @@ const Contact = () => {
           </div>
         </section>
 
-        <section className="col-span-2 rounded-xl py-10 px-5 !ml-0 lg:shadow-[#0f0f0f] lg:shadow-md lg:ml-28 lg:py-16 lg:px-24 lg:bg-white/[0.03]">
-          <div className="text-xl text-[var(--color-3)] clash-display font-semibold tracking-wide mb-4 lg:mb-8">
+        <section className="h-fit rounded-xl py-10 px-5 !ml-0 lg:shadow-[#0f0f0f] lg:shadow-md lg:ml-28 lg:py-16 lg:px-24 lg:bg-white/[0.03]">
+          <div className="text-xl min-w-[30ch] text-[var(--color-3)] clash-display font-semibold tracking-wide mb-4 lg:mb-8">
             <h2>Questions or need assistance?</h2>
             <p>Let us know about it!</p>
           </div>

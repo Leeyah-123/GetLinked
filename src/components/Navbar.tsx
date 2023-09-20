@@ -25,11 +25,9 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${
-        location.pathname !== '/' && 'hidden'
-      } lg:flex top-0 right-0 left-0 py-12 px-5 md:px-10 lg:px-20 items-center z-10 ${
+      className={`top-0 right-0 left-0 px-5 md:px-10 items-center z-10 lg:flex lg:py-12 lg:px-20 ${
         isScrolled && 'backdrop-blur-sm'
-      }`}
+      } ${location.pathname !== '/' && 'hidden'}`}
     >
       <Link to="/">
         <Logo />
