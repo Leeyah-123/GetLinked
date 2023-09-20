@@ -4,9 +4,9 @@ import Logo from './Logo';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#100B20] px-5 md:px-20 py-20 fixed bottom-0 w-full flex flex-wrap space-y-10 font-semibold">
+    <footer className="bg-[#100B20] px-5 md:px-20 py-20 w-full flex items-start flex-wrap space-y-10 font-semibold">
       {/*  */}
-      <div className="space-y-20 grow basis-96">
+      <div className="space-y-20 grow basis-80">
         <div className="space-y-5">
           <Logo />
 
