@@ -9,7 +9,7 @@
     @apply font-["Montserrat",sans-serif] bg-navy-blue text-white;
   }
   a:not(#navBtn):hover,
-  a:not(#navBtn):active,
+  a:not(#navBtn).active,
   a:not(#navBtn):focus {
     @apply transition-colors duration-300 bg-gradient-to-r from-[#903AFF] to-[#FF26B9] text-transparent bg-clip-text;
   }
@@ -18,5 +18,11 @@
 @layer components {
   .btn {
     @apply px-10 py-3 rounded font-[600] bg-gradient-to-l from-[#903aff] via-[#d434fe] to-[#fe26b9];
+  }
+  #navBtn.active {
+    @apply before:content-[''] before:absolute before:inset-0.5 before:z-10 before:bg-navy-blue before:rounded-md;
+  }
+  #navBtn.active {
+    @apply after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-b after:from-[#9A39FF] after:to-[#FF29B9] after:border-transparent after:rounded-md;
   }
 }
