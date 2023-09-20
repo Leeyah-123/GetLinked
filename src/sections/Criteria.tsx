@@ -1,15 +1,15 @@
-import bigIdea from '../assets/The big idea.png'
+import criteria from '../assets/8046554 1.png'
 
-const Introduction = () => {
+const Criteria = () => {
   return (
     <section className="flex flex-col md:flex-row pb-10 items-center justify-around space-y-10 md:space-y-0 min-h-[700px]">
-      <img src={bigIdea} alt="" className="" />
+      <img src={criteria} alt="" className="" />
 
       {/*  */}
       <div className="grow space-y-5 max-w-xl text-center md:text-left">
         <h5 className="text-4xl font-semibold">
-          Introduction to getlinked <br />
-          <span className="text-magenta">techHackathon 1.0</span>
+          Rules and <br />
+          <span className="text-magenta">Guidelines</span>
         </h5>
 
         <h6 className="text-lg">
@@ -24,4 +24,4 @@ const Introduction = () => {
   )
 }
 
-export default Introduction
+export default Criteria

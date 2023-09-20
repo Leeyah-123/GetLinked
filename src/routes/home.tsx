@@ -3,6 +3,8 @@ import curve from '../assets/Vector 4.png'
 import guy from '../assets/virtual.png'
 import spark from '../assets/Image 1.png'
 import Introduction from '../sections/Introduction'
+import RulesAndGuide from '../sections/RulesAndGuide'
+import Criteria from '../sections/Criteria'
 
 const Home = () => {
   return (
@@ -54,7 +56,14 @@ const Home = () => {
         </div>
       </section>
 
+      {/*  */}
       <Introduction />
+
+      {/*  */}
+      <RulesAndGuide />
+
+      {/*  */}
+      <Criteria />
     </>
   )
 }
