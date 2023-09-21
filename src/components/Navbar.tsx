@@ -1,31 +1,31 @@
-import { useState } from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
-import Logo from './Logo';
+import { useState } from 'react'
+import { Link, NavLink, useLocation } from 'react-router-dom'
+import Logo from './Logo'
 
 const Navbar = () => {
-  const location = useLocation();
+  const location = useLocation()
 
-  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(false)
 
   const toggleNav = () => {
-    setIsNavOpen(!isNavOpen);
+    setIsNavOpen(!isNavOpen)
 
     if (isNavOpen) {
-      document.body.style.overflow = 'auto';
-      document.body.style.overflowX = 'hidden';
+      document.body.style.overflow = 'auto'
+      document.body.style.overflowX = 'hidden'
     } else {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden'
     }
-  };
+  }
 
   return (
     <>
       <button
         aria-controls="primary-navigation"
         aria-expanded={isNavOpen}
-        className={`absolute ${
-          isNavOpen ? 'top-6 right-9' : 'top-7 right-10'
-        } ${location.pathname !== '/' && 'hidden'} z-[100] lg:hidden`}
+        className={`absolute ${isNavOpen ? 'top-6 right-9' : 'top-7 right-10'} ${
+          location.pathname !== '/' && 'hidden'
+        } z-[100] lg:hidden`}
         onClick={toggleNav}
       >
         {/* This is for screen readers only and won't be visible on screen */}
@@ -84,7 +84,7 @@ const Navbar = () => {
         }`}
       >
         <Link to="/">
-          <Logo className="aspect-[170/32] w-[20vw] lg:w-auto" />
+          <Logo className="aspect-[170/32] w-[24vw] lg:w-auto" />
         </Link>
 
         {/* Mobile Navigation */}
@@ -163,10 +163,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/#faqs"
-                  className={`${location.hash === '#faqs' && 'active'}`}
-                >
+                <Link to="/#faqs" className={`${location.hash === '#faqs' && 'active'}`}>
                   faqs
                 </Link>
               </li>
@@ -179,9 +176,7 @@ const Navbar = () => {
               id="registerBtn"
               to="/register"
               className={({ isActive }) =>
-                `btn relative ${
-                  isActive && 'active bg-none bg-[var(--navy-blue)]'
-                }`
+                `btn relative ${isActive && 'active bg-none bg-[var(--navy-blue)]'}`
               }
             >
               <span className="relative z-20">Register</span>
@@ -192,7 +187,7 @@ const Navbar = () => {
         </div>
       </nav>
     </>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
