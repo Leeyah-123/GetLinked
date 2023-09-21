@@ -1,12 +1,19 @@
 import { FormEvent, useEffect, useState } from 'react';
 
 // images
-import graphicDesignerImg from '../assets/images/3d-graphic-designer.svg';
+import graphicDesignerImg from '../assets/images/register/3d-graphic-designer.svg';
 import flare from '../assets/images/register/flare.svg';
 import flare2 from '../assets/images/register/flare2.svg';
-import littleBoyImg from '../assets/images/little-boy.svg';
-import littleGirlImg from '../assets/images/little-girl.svg';
-import registrationSuccessfulImg from '../assets/images/register-successful.svg';
+import littleBoyImg from '../assets/images/register/little-boy.svg';
+import littleGirlImg from '../assets/images/register/little-girl.svg';
+import registrationSuccessfulImg from '../assets/images/register/register-successful.svg';
+
+// stars
+import star1 from '../assets/images/register/star1.svg';
+import star2 from '../assets/images/register/star2.svg';
+import star3 from '../assets/images/register/star3.svg';
+import star4 from '../assets/images/register/star4.svg';
+import star5 from '../assets/images/register/star5.svg';
 
 // icons
 import { BiRefresh } from 'react-icons/bi';
@@ -139,7 +146,7 @@ const Register = () => {
           className="w-[50vw] max-w-full aspect-square lg:-ml-11 lg:-mt-40"
         />
 
-        <div className="mb-2 h-fit rounded-xl px-[5vw] py-[7vh] md:px-[5vw] md:py-[3vh] lg:-ml-7 lg:shadow-[#0f0f0f] lg:shadow-md lg:bg-white/[0.03]  xl:py-[5vh]">
+        <div className="relative mb-2 h-fit rounded-xl px-[5vw] py-[7vh] md:px-[5vw] md:py-[3vh] lg:-ml-7 lg:shadow-[#0f0f0f] lg:shadow-md lg:bg-white/[0.03]  xl:py-[5vh]">
           <h1 className="hidden lg:block text-2xl text-[var(--color-3)] clash-display font-medium tracking-wide mb-4 lg:mb-8">
             Register
           </h1>
@@ -334,6 +341,17 @@ const Register = () => {
               </button>
             </div>
           </form>
+
+          <img
+            src={star4}
+            alt=""
+            className="absolute top-1/3 left-0 w-[3vw] lg:top-5 lg:left-auto lg:right-1/3 lg:w-6"
+          />
+          <img
+            src={star5}
+            alt=""
+            className="hidden absolute -bottom-3 right-32 lg:block"
+          />
         </div>
 
         <div
@@ -376,6 +394,21 @@ const Register = () => {
           src={flare2}
           alt=""
           className="hidden absolute bottom-0 right-0 mix-blend-hard-light pointer-events-none -z-10 lg:block"
+        />
+        <img
+          src={star1}
+          alt=""
+          className="absolute left-auto right-[5vw] w-[3vw] top-0 lg:left-[8vw] lg:right-auto lg:w-auto"
+        />
+        <img
+          src={star2}
+          alt=""
+          className="absolute hidden left-[10vw] w-[3vw] bottom-1/4 lg:w-auto lg:block"
+        />
+        <img
+          src={star3}
+          alt=""
+          className="absolute right-3 bottom-[15rem] w-[3vw] lg:w-auto lg:bottom-1/3 lg:right-auto lg:left-[40vw]"
         />
       </div>
     </>
