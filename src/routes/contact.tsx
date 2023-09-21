@@ -237,7 +237,7 @@ const Contact = () => {
         <img
           src={flare2}
           alt=""
-          className="absolute bottom-0 right-0 pointer-events-none mix-blend-hard-light -z-10"
+          className="absolute hidden bottom-0 right-0 pointer-events-none mix-blend-hard-light -z-10 lg:block"
         />
       </div>
     </>
