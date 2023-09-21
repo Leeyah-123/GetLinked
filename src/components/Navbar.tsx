@@ -24,7 +24,7 @@ const Navbar = () => {
         aria-controls="primary-navigation"
         aria-expanded={isNavOpen}
         className={`absolute ${
-          isNavOpen ? 'top-7 right-9' : 'top-8 right-10'
+          isNavOpen ? 'top-6 right-9' : 'top-7 right-10'
         } ${location.pathname !== '/' && 'hidden'} z-[100] lg:hidden`}
         onClick={toggleNav}
       >
