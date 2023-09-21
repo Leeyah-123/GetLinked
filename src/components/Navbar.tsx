@@ -1,11 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import Logo from './Logo';
 
 const Navbar = () => {
   const location = useLocation();
 
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const toggleNav = () => {
@@ -18,22 +17,6 @@ const Navbar = () => {
       window.document.body.style.overflow = 'hidden';
     }
   };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   return (
     <>
@@ -93,11 +76,10 @@ const Navbar = () => {
         </svg>
       </button>
 
-      {/* Desktop Navbar */}
       <nav
-        className={`px-10 py-7 z-50 lg:items-center lg:z-10 lg:flex lg:py-12 lg:px-20 ${
-          isScrolled && 'backdrop-blur-sm'
-        } ${location.pathname !== '/' && 'hidden'}`}
+        className={`px-10 py-7 z-30 lg:items-center lg:flex lg:py-12 lg:px-20 ${
+          location.pathname !== '/' && 'hidden'
+        }`}
       >
         <Link to="/">
           <Logo className="aspect-[170/32] w-[10vw] lg:w-auto" />
