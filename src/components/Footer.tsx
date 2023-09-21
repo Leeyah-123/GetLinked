@@ -8,7 +8,7 @@ const Footer = () => {
       {/*  */}
       <div className="space-y-20 grow basis-80">
         <div className="space-y-5">
-          <Logo />
+          <Logo className="" />
 
           <p className="">
             Getlinked Tech Hackathon is a technology innovation program

@@ -100,7 +100,7 @@ const Navbar = () => {
         } ${location.pathname !== '/' && 'hidden'}`}
       >
         <Link to="/">
-          <Logo />
+          <Logo className="aspect-[170/32] w-[10vw] lg:w-auto" />
         </Link>
 
         {/* Mobile Navigation */}

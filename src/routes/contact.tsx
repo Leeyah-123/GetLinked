@@ -77,7 +77,7 @@ const Contact = () => {
           </div>
         </section>
 
-        <section className="h-fit rounded-xl py-10 px-5 !ml-0 lg:shadow-[#0f0f0f] lg:shadow-md lg:ml-28 lg:py-16 lg:px-24 lg:bg-white/[0.03]">
+        <section className="rounded-xl py-10 px-5 !ml-0 lg:shadow-[#0f0f0f] lg:shadow-md lg:ml-28 lg:py-16 lg:px-24 lg:bg-white/[0.03]">
           <div className="text-xl text-[var(--color-3)] clash-display font-semibold tracking-wide mb-4 xl:min-w-[30ch] lg:mb-8">
             <h2>Questions or need assistance?</h2>
             <p>Let us know about it!</p>
