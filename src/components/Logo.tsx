@@ -7,7 +7,7 @@ const Logo = () => {
       <img
         src={logo}
         alt="GetLinked Logo"
-        className="lg:hidden aspect-[170/32] w-20"
+        className="lg:hidden aspect-[170/32] w-[10vw]"
       />
     </>
   );

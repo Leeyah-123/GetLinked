@@ -12,7 +12,8 @@ const Navbar = () => {
     setIsNavOpen(!isNavOpen);
 
     if (isNavOpen) {
-      window.document.body.style.overflow = 'scroll';
+      window.document.body.style.overflow = 'auto';
+      window.document.body.style.overflowX = 'hidden';
     } else {
       window.document.body.style.overflow = 'hidden';
     }
@@ -37,11 +38,16 @@ const Navbar = () => {
   return (
     <>
       <button
-        className={`absolute right-10 ${isNavOpen ? 'top-6' : 'top-7'} ${
-          location.pathname !== '/' && 'hidden'
-        } z-[100] lg:hidden`}
+        aria-controls="primary-navigation"
+        aria-expanded={isNavOpen}
+        className={`absolute ${
+          isNavOpen ? 'top-6 right-14' : 'top-7 right-10'
+        } ${location.pathname !== '/' && 'hidden'} z-[100] lg:hidden`}
         onClick={toggleNav}
       >
+        {/* This is for screen readers only and won't be visible on screen */}
+        <span className="sr-only">Menu</span>
+
         {/* Nav Open Icon */}
         <svg
           width="19"
@@ -56,13 +62,14 @@ const Navbar = () => {
             fill="white"
           />
         </svg>
+
         {/* Nav Close Icon */}
         <svg
           width="23"
           height="23"
           viewBox="0 0 23 23"
           fill="none"
-          className={`${isNavOpen ? 'block' : 'hidden'}`}
+          className={`${isNavOpen ? 'block right-2' : 'hidden'}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <circle cx="11.5" cy="11.5" r="11" stroke="url(#paint0_linear_0_1)" />
@@ -86,21 +93,26 @@ const Navbar = () => {
         </svg>
       </button>
 
+      {/* Desktop Navbar */}
       <nav
-        className={`px-10 py-7 z-50 md:hidden ${
-          location.pathname !== '/' && 'hidden'
-        }`}
+        className={`px-10 py-7 z-50 lg:items-center lg:z-10 lg:flex lg:py-12 lg:px-20 ${
+          isScrolled && 'backdrop-blur-sm'
+        } ${location.pathname !== '/' && 'hidden'}`}
       >
         <Link to="/">
           <Logo />
         </Link>
 
+        {/* Mobile Navigation */}
         <div
-          className={`fixed inset-0 bg-[var(--navy-blue)] transition-transform duration-300 ${
-            isNavOpen ? 'translate-x-[0]' : 'translate-x-[100%]'
+          className={`fixed inset-0 bg-[var(--navy-blue)] transition-transform duration-300 lg:hidden ${
+            isNavOpen ? 'translate-x-[0]' : 'translate-x-[100vw]'
           }`}
         >
-          <ul className="flex flex-col py-32 px-16 gap-y-5 capitalize font-medium text-lg">
+          <ul
+            id="primary-navigation"
+            className="flex flex-col py-32 px-16 gap-y-5 capitalize font-medium text-lg"
+          >
             <li>
               <Link
                 to="/#timeline"
@@ -145,18 +157,9 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-      </nav>
 
-      <nav
-        className={`hidden md:px-10 items-center z-10 lg:flex lg:py-12 lg:px-20 ${
-          isScrolled && 'backdrop-blur-sm'
-        } ${location.pathname !== '/' && 'hidden'}`}
-      >
-        <Link to="/">
-          <Logo />
-        </Link>
-
-        <div className="lg:block lg:ml-auto">
+        {/* Desktop Navigation */}
+        <div className="hidden lg:block lg:ml-auto">
           <div className="space-x-32 md:flex items-center">
             <ul className="inline-flex space-x-5 capitalize font-semibold">
               <li>
