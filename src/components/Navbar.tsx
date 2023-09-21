@@ -37,8 +37,8 @@ const Navbar = () => {
   return (
     <>
       <button
-        className={`absolute right-10 ${
-          isNavOpen ? 'top-6' : 'top-7'
+        className={`absolute right-10 ${isNavOpen ? 'top-6' : 'top-7'} ${
+          location.pathname !== '/' && 'hidden'
         } z-[100] lg:hidden`}
         onClick={toggleNav}
       >
@@ -79,14 +79,18 @@ const Navbar = () => {
               y2="23"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#903AFF" />
-              <stop offset="1" stop-color="#FF26B9" />
+              <stop stopColor="#903AFF" />
+              <stop offset="1" stopColor="#FF26B9" />
             </linearGradient>
           </defs>
         </svg>
       </button>
 
-      <nav className={`px-10 py-7 z-50 md:hidden`}>
+      <nav
+        className={`px-10 py-7 z-50 md:hidden ${
+          location.pathname !== '/' && 'hidden'
+        }`}
+      >
         <Link to="/">
           <Logo />
         </Link>
@@ -101,6 +105,7 @@ const Navbar = () => {
               <Link
                 to="/#timeline"
                 className={`${location.hash === '#timeline' && 'active'}`}
+                onClick={toggleNav}
               >
                 timeline
               </Link>
@@ -109,6 +114,7 @@ const Navbar = () => {
               <Link
                 to="/#overview"
                 className={`${location.hash === '#overview' && 'active'}`}
+                onClick={toggleNav}
               >
                 overview
               </Link>
@@ -117,22 +123,22 @@ const Navbar = () => {
               <Link
                 to="/#faqs"
                 className={`${location.hash === '#faqs' && 'active'}`}
+                onClick={toggleNav}
               >
                 faqs
               </Link>
             </li>
             <li>
-              <NavLink to="/contact">contact</NavLink>
+              <NavLink to="/contact" onClick={toggleNav}>
+                contact
+              </NavLink>
             </li>
             <li>
               <NavLink
                 id="registerBtn"
                 to="/register"
-                className={({ isActive }) =>
-                  `btn relative transition-transform hover:scale-[1.05] focus:scale-[1.05] ${
-                    isActive && 'active bg-none bg-[var(--navy-blue)]'
-                  }`
-                }
+                onClick={toggleNav}
+                className={`btn relative transition-transform hover:scale-[1.05] focus:scale-[1.05]`}
               >
                 <span className="relative z-20">Register</span>
               </NavLink>

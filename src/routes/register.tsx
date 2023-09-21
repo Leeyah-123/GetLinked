@@ -8,15 +8,15 @@ import BackButton from '../components/BackButton';
 const Register = () => {
   return (
     <>
-      <BackButton className="px-[17vw] py-[5vh]" />
+      <BackButton className="pl-[10vw] md:pl-[20vw] py-[5vh]" />
 
-      <h1 className="px-[17vw] self-start text-xl text-[var(--color-3)] clash-display font-medium tracking-wide lg:hidden">
+      <h1 className="pl-[10vw] md:pl-[20vw] self-start text-xl text-[var(--color-3)] clash-display font-medium tracking-wide lg:hidden">
         Register
       </h1>
 
       <div
         id="contact"
-        className="relative min-h-screen pr-[8vw] flex flex-col items-center lg:px-[8vw] lg:items-stretch lg:grid lg:grid-cols-2 lg:grid-flow-col"
+        className="relative min-h-screen px-[5vw] flex flex-col items-center lg:px-[8vw] lg:items-stretch lg:grid lg:grid-cols-2 lg:grid-flow-col"
       >
         <img
           src={graphicDesignerImg}
@@ -24,13 +24,13 @@ const Register = () => {
           className="w-[40vw] max-w-none aspect-square md:w-[50vw] lg:pb-32 -ml-11"
         />
 
-        <div className="mb-2 h-fit rounded-xl px-[9vw] py-[7vh] md:px-[5vw] md:py-[3vh] lg:mt-5 lg:shadow-[#0f0f0f] lg:shadow-md lg:bg-white/[0.03] xl:max-h-[75vh] xl:py-[7vh]">
+        <div className="mb-2 h-fit rounded-xl px-[5vw] py-[7vh] md:px-[5vw] md:py-[3vh] lg:mt-5 lg:shadow-[#0f0f0f] lg:shadow-md lg:bg-white/[0.03] xl:max-h-[75vh] xl:py-[7vh]">
           <h1 className="hidden lg:block text-2xl text-[var(--color-3)] clash-display font-medium tracking-wide mb-4 lg:mb-8">
             Register
           </h1>
 
           <div className="mb-3 flex">
-            <p className="w-full sm:w-auto text-sm font-medium">
+            <p className="w-[20ch] sm:w-auto text-sm font-medium">
               Be part of this movement!
             </p>
             <div className="w-[30%] lg:w-28">
@@ -54,7 +54,7 @@ const Register = () => {
               Create your account
             </header>
 
-            <div className="grid lg:grid-cols-2 lg:grid-rows-3 gap-5">
+            <div className="grid lg:grid-cols-2 lg:grid-rows-2 gap-5">
               <div>
                 <label htmlFor="teamName" className="text-sm font-medium">
                   Team's Name
@@ -103,6 +103,9 @@ const Register = () => {
                   className="w-full mt-2 rounded-sm text-sm bg-transparent text-white placeholder:text-white/25 placeholder:font-medium placeholder:text-sm outline outline-1 outline-white px-5 py-2"
                 />
               </div>
+            </div>
+
+            <div className="mt-5 grid grid-cols-[60%_40%] gap-2 lg:grid-cols-2 lg:grid-rows-1 lg:gap-5">
               <div>
                 <label htmlFor="category" className="text-sm font-medium">
                   Category
@@ -130,6 +133,7 @@ const Register = () => {
                   </option>
                 </select>
               </div>
+
               <div>
                 <label htmlFor="groupSize" className="text-sm font-medium">
                   Group Size
