@@ -11,10 +11,10 @@ const Navbar = () => {
     setIsNavOpen(!isNavOpen);
 
     if (isNavOpen) {
-      window.document.body.style.overflow = 'auto';
-      window.document.body.style.overflowX = 'hidden';
+      document.body.style.overflow = 'auto';
+      document.body.style.overflowX = 'hidden';
     } else {
-      window.document.body.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
     }
   };
 

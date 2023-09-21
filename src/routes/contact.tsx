@@ -1,4 +1,4 @@
-import { FormEvent, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 
 // icons
 import {
@@ -70,6 +70,10 @@ const Contact = () => {
     resetFields();
     console.log(data);
   };
+
+  useEffect(() => {
+    document.title = 'GetLinked - Contact Us';
+  }, []);
 
   return (
     <>

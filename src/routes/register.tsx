@@ -15,9 +15,9 @@ import { BiRefresh } from 'react-icons/bi';
 import { getCategories, register } from '../utils/apiRequests';
 
 // components
+import { Loading } from 'notiflix/build/notiflix-loading-aio';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { Report } from 'notiflix/build/notiflix-report-aio';
-import { Loading } from 'notiflix/build/notiflix-loading-aio';
 import BackButton from '../components/BackButton';
 
 const Register = () => {
@@ -38,13 +38,13 @@ const Register = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   const openModal = () => {
-    window.document.body.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
 
     setIsModalOpen(true);
   };
   const closeModal = () => {
-    window.document.body.style.overflow = 'auto';
-    window.document.body.style.overflowX = 'hidden';
+    document.body.style.overflow = 'auto';
+    document.body.style.overflowX = 'hidden';
 
     setIsModalOpen(false);
   };
@@ -116,6 +116,8 @@ const Register = () => {
   };
 
   useEffect(() => {
+    document.title = 'GetLinked - Register';
+
     fetchCategories();
   }, []);
 
