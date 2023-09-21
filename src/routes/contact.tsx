@@ -1,4 +1,4 @@
-import { FormEvent, useEffect, useState } from 'react';
+import { FormEvent, useState } from 'react';
 
 // icons
 import {
@@ -18,9 +18,9 @@ import star4 from '../assets/images/contact/star4.svg';
 import star5 from '../assets/images/contact/star5.svg';
 
 // components
+import { Loading } from 'notiflix/build/notiflix-loading-aio';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { Report } from 'notiflix/build/notiflix-report-aio';
-import { Loading } from 'notiflix/build/notiflix-loading-aio';
 import BackButton from '../components/BackButton';
 
 // utilities
@@ -75,10 +75,6 @@ const Contact = () => {
     resetFields();
     console.log(data);
   };
-
-  useEffect(() => {
-    document.title = 'GetLinked - Contact Us';
-  }, []);
 
   return (
     <>

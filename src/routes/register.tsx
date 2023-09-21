@@ -123,8 +123,6 @@ const Register = () => {
   };
 
   useEffect(() => {
-    document.title = 'GetLinked - Register';
-
     fetchCategories();
   }, []);
 
