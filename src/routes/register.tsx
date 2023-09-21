@@ -2,8 +2,8 @@ import { FormEvent, useEffect, useState } from 'react';
 
 // images
 import graphicDesignerImg from '../assets/images/3d-graphic-designer.svg';
-import flare from '../assets/images/contact/flare.svg';
-import flare2 from '../assets/images/contact/flare2.svg';
+import flare from '../assets/images/register/flare.svg';
+import flare2 from '../assets/images/register/flare2.svg';
 import littleBoyImg from '../assets/images/little-boy.svg';
 import littleGirlImg from '../assets/images/little-girl.svg';
 import registrationSuccessfulImg from '../assets/images/register-successful.svg';
@@ -136,7 +136,7 @@ const Register = () => {
         <img
           src={graphicDesignerImg}
           alt="A graphic designer at his desk"
-          className="w-[40vw] max-w-none aspect-square md:w-[50vw] lg:-ml-11 lg:-mt-40 lg:min-w-full"
+          className="w-[50vw] max-w-full aspect-square lg:-ml-11 lg:-mt-40"
         />
 
         <div className="mb-2 h-fit rounded-xl px-[5vw] py-[7vh] md:px-[5vw] md:py-[3vh] lg:-ml-7 lg:shadow-[#0f0f0f] lg:shadow-md lg:bg-white/[0.03]  xl:py-[5vh]">

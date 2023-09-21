@@ -11,6 +11,11 @@ import {
 // images
 import flare from '../assets/images/contact/flare.svg';
 import flare2 from '../assets/images/contact/flare2.svg';
+import star1 from '../assets/images/contact/star1.svg';
+import star2 from '../assets/images/contact/star2.svg';
+import star3 from '../assets/images/contact/star3.svg';
+import star4 from '../assets/images/contact/star4.svg';
+import star5 from '../assets/images/contact/star5.svg';
 
 // components
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
@@ -83,7 +88,7 @@ const Contact = () => {
         id="contact"
         className="relative px-[10vw] lg:grid lg:grid-cols-2 lg:grid-flow-col lg:pt-10 lg:pb-40"
       >
-        <section className="my-10 hidden lg:block">
+        <section className="relative my-10 hidden lg:block">
           <h1 className="text-3xl text-[var(--color-3)] clash-display font-black tracking-wide mb-3">
             Get in touch
           </h1>
@@ -140,9 +145,11 @@ const Contact = () => {
               </li>
             </ul>
           </div>
+
+          <img src={star1} alt="" className="absolute -top-[10vh] left-3" />
         </section>
 
-        <section className="rounded-xl py-10 px-5 !ml-0 lg:shadow-[#0f0f0f] lg:shadow-md lg:ml-28 lg:py-16 lg:px-24 lg:bg-white/[0.03]">
+        <section className="relative rounded-xl py-10 px-5 !ml-0 lg:shadow-[#0f0f0f] lg:shadow-md lg:ml-28 lg:py-16 lg:px-24 lg:bg-white/[0.03]">
           <div className="text-xl text-[var(--color-3)] clash-display font-semibold tracking-wide mb-4 xl:min-w-[30ch] lg:mb-8">
             <h2>Questions or need assistance?</h2>
             <p>Let us know about it!</p>
@@ -231,18 +238,54 @@ const Contact = () => {
               </li>
             </ul>
           </div>
+
+          <img
+            src={star3}
+            alt=""
+            className="hidden absolute left-[0] -ml-4 bottom-1/4 lg:block"
+          />
+          <img
+            src={star2}
+            alt=""
+            className="hidden absolute -left-28 top-1/4 lg:block"
+          />
         </section>
 
-        <img
-          src={flare}
-          alt=""
-          className="absolute top-2 left-0 pointer-events-none mix-blend-hard-light -z-10 lg:-top-48 lg:-left-2"
-        />
-        <img
-          src={flare2}
-          alt=""
-          className="absolute hidden bottom-0 right-0 pointer-events-none mix-blend-hard-light -z-10 lg:block"
-        />
+        <div aria-hidden={true}>
+          {/* Flares */}
+          <img
+            src={flare}
+            alt=""
+            className="absolute top-2 left-0 pointer-events-none mix-blend-hard-light -z-10 lg:-top-48 lg:-left-2"
+          />
+          <img
+            src={flare2}
+            alt=""
+            className="absolute hidden bottom-0 right-0 pointer-events-none mix-blend-hard-light -z-10 lg:block"
+          />
+
+          {/* Stars */}
+          <img
+            src={star1}
+            alt=""
+            className="absolute top-0 right-2/3 w-[3vw] lg:hidden lg:w-auto"
+          />
+          <img
+            src={star1}
+            alt=""
+            className="absolute bottom-32 left-[6vw] w-[3vw] lg:hidden lg:w-auto"
+          />
+          <img
+            src={star4}
+            alt=""
+            className="absolute top-10 right-4 w-[3vw] lg:right-[15vw] lg:-top-5 lg:w-auto"
+          />
+          <img
+            src={star5}
+            alt=""
+            className="absolute bottom-40 right-[6vw] w-[3vw] lg:w-auto"
+          />
+        </div>
       </div>
     </>
   );
