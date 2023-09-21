@@ -232,14 +232,12 @@ const Contact = () => {
         <img
           src={flare}
           alt=""
-          className="absolute top-2 left-0 lg:-top-20 lg:-left-2 -z-10"
-          style={{ filter: 'brightness(70%)' }}
+          className="absolute top-2 left-0 pointer-events-none mix-blend-hard-light -z-10 lg:-top-48 lg:-left-2"
         />
         <img
           src={flare2}
           alt=""
-          className="absolute bottom-0 right-0 -z-50"
-          style={{ filter: 'brightness(70%)' }}
+          className="absolute bottom-0 right-0 pointer-events-none mix-blend-hard-light -z-10"
         />
       </div>
     </>
