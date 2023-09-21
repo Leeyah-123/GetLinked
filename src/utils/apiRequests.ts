@@ -6,7 +6,7 @@ const axiosInstance = axios.create({ baseURL: baseUrl, responseType: 'json' });
 
 const getCategories = async (): Promise<{
   success: boolean;
-  data: { id: number; name: string }[] | null;
+  data: Array<{ id: number; name: string }> | null;
   error: AxiosError | null;
 }> => {
   try {
@@ -27,7 +27,7 @@ const register = async (data: {
   privacy_poclicy_accepted: boolean;
 }): Promise<{
   success: boolean;
-  data: { id: number; name: string }[] | null;
+  data: Array<{ id: number; name: string }> | null;
   error: AxiosError | null;
 }> => {
   try {
@@ -38,6 +38,22 @@ const register = async (data: {
   }
 };
 
-const contact = () => {};
+const contact = async (data: {
+  email: string;
+  phone_number: string;
+  first_name: string;
+  message: string;
+}): Promise<{
+  success: boolean;
+  data: Array<object> | null;
+  error: AxiosError | null;
+}> => {
+  try {
+    const response = await axiosInstance.post(`/hackathon/contact-form`, data);
+    return { success: true, data: response.data, error: null };
+  } catch (error) {
+    return { success: false, data: null, error: error as AxiosError };
+  }
+};
 
 export { contact, getCategories, register };

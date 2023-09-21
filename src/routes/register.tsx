@@ -17,6 +17,7 @@ import { getCategories, register } from '../utils/apiRequests';
 // components
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { Report } from 'notiflix/build/notiflix-report-aio';
+import { Loading } from 'notiflix/build/notiflix-loading-aio';
 import BackButton from '../components/BackButton';
 
 const Register = () => {
@@ -83,6 +84,7 @@ const Register = () => {
       return;
     }
 
+    Loading.hourglass();
     const { success, error } = await register({
       category,
       email,
@@ -92,18 +94,17 @@ const Register = () => {
       project_topic: projectTopic,
       team_name: teamName,
     });
+    Loading.remove();
 
     if (!success) {
       type ResponseData = { string: Array<string> };
 
       const responseData: ResponseData = error?.response?.data as ResponseData;
-      let errorString = 'The following errors occurred: ';
+      let errorString = '';
 
       for (const key in responseData) {
         const errors: Array<string> = responseData[key as keyof ResponseData];
-        errors.forEach((err, i) => {
-          errorString = errorString.concat(`${i + 1}. ${err} `);
-        });
+        return (errorString = errors[0]);
       }
 
       Report.failure('Unable to register', errorString, 'Okay');
@@ -176,6 +177,7 @@ const Register = () => {
                   name="teamName"
                   id="teamName"
                   value={teamName}
+                  minLength={3}
                   onChange={(e) => setTeamName(e.target.value)}
                   placeholder="Enter the name of your group"
                   className="w-full mt-2 rounded-sm text-sm bg-transparent text-white placeholder:text-white/25 placeholder:font-medium placeholder:text-sm outline outline-1 outline-white px-5 py-2"
@@ -191,6 +193,7 @@ const Register = () => {
                   id="phone"
                   value={phoneNum}
                   onChange={(e) => setPhoneNum(e.target.value)}
+                  minLength={11}
                   placeholder="Enter your phone number"
                   className="w-full mt-2 rounded-sm text-sm bg-transparent text-white placeholder:text-white/25 placeholder:font-medium placeholder:text-sm outline outline-1 outline-white px-5 py-2"
                 />
@@ -217,6 +220,7 @@ const Register = () => {
                   type="text"
                   name="projectTopic"
                   id="projectTopic"
+                  minLength={3}
                   value={projectTopic}
                   onChange={(e) => setProjectTopic(e.target.value)}
                   placeholder="What is your group project topic"

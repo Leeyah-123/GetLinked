@@ -1,3 +1,6 @@
+import { FormEvent, useState } from 'react';
+
+// icons
 import {
   RiFacebookFill,
   RiInstagramLine,
@@ -5,11 +8,69 @@ import {
   RiTwitterXLine,
 } from 'react-icons/ri';
 
+// images
 import flare from '../assets/images/contact/flare.svg';
 import flare2 from '../assets/images/contact/flare2.svg';
+
+// components
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import { Report } from 'notiflix/build/notiflix-report-aio';
+import { Loading } from 'notiflix/build/notiflix-loading-aio';
 import BackButton from '../components/BackButton';
 
+// utilities
+import { contact } from '../utils/apiRequests';
+
 const Contact = () => {
+  const [email, setEmail] = useState<string>('');
+  const [phoneNum, setPhoneNum] = useState<string>('');
+  const [firstName, setFirstName] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
+
+  const resetFields = () => {
+    setEmail('');
+    setFirstName('');
+    setMessage('');
+    setPhoneNum('');
+  };
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+
+    if (!email || !firstName || !message) {
+      Notify.failure('Please fill in all fields');
+      return;
+    }
+
+    Loading.hourglass();
+    const { success, error, data } = await contact({
+      email,
+      first_name: firstName,
+      phone_number: phoneNum,
+      message,
+    });
+    Loading.remove();
+
+    if (!success) {
+      type ResponseData = { string: Array<string> };
+
+      const responseData: ResponseData = error?.response?.data as ResponseData;
+      let errorString = '';
+
+      for (const key in responseData) {
+        const errors: Array<string> = responseData[key as keyof ResponseData];
+        return (errorString = errors[0]);
+      }
+
+      Report.failure('An error occurred', errorString, 'Okay');
+      return;
+    }
+
+    Notify.success('Successfully sent message');
+    resetFields();
+    console.log(data);
+  };
+
   return (
     <>
       <BackButton className="px-[calc(1.25em+10vw)] pt-[6vh]" />
@@ -85,38 +146,40 @@ const Contact = () => {
           <div className="mb-4 font-medium text-sm lg:hidden">
             Email us below to any question related to our event
           </div>
-          <form className="flex flex-col gap-7">
+          <form className="flex flex-col gap-7" onSubmit={handleSubmit}>
             <input
               type="text"
               name="firstName"
               id="firstName"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              minLength={3}
               placeholder="First Name"
-              className="hidden lg:block rounded-sm lg:rounded-md bg-transparent text-white placeholder:text-white placeholder:font-medium outline outline-1 outline-white px-5 p-2"
+              className="rounded-sm lg:rounded-md bg-transparent text-white placeholder:text-white placeholder:font-medium outline outline-1 outline-white px-5 p-2"
             />
             <input
-              type="text"
-              name="teamName"
-              id="teamName"
-              placeholder="Team's Name"
+              type="number"
+              name="phoneNum"
+              id="phoneNum"
+              value={phoneNum}
+              onChange={(e) => setPhoneNum(e.target.value)}
+              placeholder="Phone Number"
               className="lg:hidden rounded-sm lg:rounded-md bg-transparent text-white placeholder:text-white placeholder:font-medium outline outline-1 outline-white px-5 p-2"
             />
             <input
-              type="text"
-              name="topic"
-              id="topic"
-              placeholder="Topic"
-              className="lg:hidden rounded-sm lg:rounded-md bg-transparent text-white placeholder:text-white placeholder:font-medium outline outline-1 outline-white px-5 p-2"
-            />
-            <input
-              type="text"
+              type="email"
               name="mail"
               id="mail"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Mail"
               className="rounded-sm lg:rounded-md bg-transparent text-white placeholder:text-white placeholder:font-medium outline outline-1 outline-white px-5 p-2"
             />
             <textarea
               name="message"
               id="message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               cols={3}
               rows={3}
               placeholder="Message"
