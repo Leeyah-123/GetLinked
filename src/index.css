@@ -35,7 +35,7 @@
 
 @layer components {
   .btn {
-    @apply px-10 py-3 rounded font-[600] bg-gradient-to-l from-[var(--color-1)] via-[#d434fe] to-[var(--color-2)];
+    @apply px-10 py-3 rounded font-[600] bg-gradient-to-l from-[var(--color-1)] via-[#d434fe] to-[var(--color-2)] transition-transform hover:scale-[1.05] focus:scale-[1.05];
   }
   #registerBtn.active::before {
     @apply content-[''] absolute inset-0.5 z-10 bg-[var(--navy-blue)] rounded-md;

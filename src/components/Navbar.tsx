@@ -160,8 +160,8 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden lg:block lg:ml-auto">
-          <div className="space-x-32 md:flex items-center">
-            <ul className="inline-flex space-x-5 capitalize font-semibold">
+          <div className="space-x-32 items-center font-medium md:flex">
+            <ul className="inline-flex space-x-5 capitalize">
               <li>
                 <Link
                   to="/#timeline"
@@ -195,7 +195,7 @@ const Navbar = () => {
               id="registerBtn"
               to="/register"
               className={({ isActive }) =>
-                `btn relative transition-transform hover:scale-[1.05] focus:scale-[1.05] ${
+                `btn relative ${
                   isActive && 'active bg-none bg-[var(--navy-blue)]'
                 }`
               }

@@ -16,15 +16,15 @@ const Register = () => {
 
       <div
         id="contact"
-        className="relative min-h-screen px-[5vw] flex flex-col items-center lg:px-[8vw] lg:items-stretch lg:grid lg:grid-cols-2 lg:grid-flow-col"
+        className="relative min-h-screen px-[5vw] flex flex-col items-center lg:px-[7vw] lg:items-stretch lg:grid lg:grid-cols-2 lg:grid-flow-col"
       >
         <img
           src={graphicDesignerImg}
           alt="A graphic designer at his desk"
-          className="w-[40vw] max-w-none aspect-square md:w-[50vw] lg:pb-32 -ml-11"
+          className="w-[40vw] max-w-none aspect-square md:w-[50vw] lg:-ml-11 lg:-mt-40 lg:min-w-full"
         />
 
-        <div className="mb-2 h-fit rounded-xl px-[5vw] py-[7vh] md:px-[5vw] md:py-[3vh] lg:mt-5 lg:shadow-[#0f0f0f] lg:shadow-md lg:bg-white/[0.03] xl:max-h-[75vh] xl:py-[7vh]">
+        <div className="mb-2 h-fit rounded-xl px-[5vw] py-[7vh] md:px-[5vw] md:py-[3vh] lg:-ml-7 lg:shadow-[#0f0f0f] lg:shadow-md lg:bg-white/[0.03]  xl:py-[5vh]">
           <h1 className="hidden lg:block text-2xl text-[var(--color-3)] clash-display font-medium tracking-wide mb-4 lg:mb-8">
             Register
           </h1>
@@ -84,7 +84,7 @@ const Register = () => {
                   Email
                 </label>
                 <input
-                  type="text"
+                  type="email"
                   name="email"
                   id="email"
                   placeholder="Enter your email address"
