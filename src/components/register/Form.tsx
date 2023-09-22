@@ -169,7 +169,7 @@ const RegisterForm = ({ openModal }: { openModal: () => void }) => {
             placeholder="Select your category"
             value={category}
             onChange={(e) => setCategory(parseInt(e.target.value))}
-            className={`w-full mt-2 rounded-sm text-sm bg-transparent placeholder:text-white/25 placeholder:font-medium placeholder:text-sm outline outline-1 outline-white px-5 py-2 ${
+            className={`w-full mt-2 rounded-sm text-sm bg-transparent placeholder:text-white/25 placeholder:font-medium placeholder:text-sm outline outline-1 outline-white px-5 py-2 focus:outline-[3px] ${
               category ? 'text-white' : 'text-white/25'
             }`}
           >
@@ -214,7 +214,7 @@ const RegisterForm = ({ openModal }: { openModal: () => void }) => {
             value={groupSize}
             onChange={(e) => setGroupSize(parseInt(e.target.value))}
             placeholder="Select"
-            className={`w-full mt-2 rounded-sm text-sm bg-transparent outline outline-1 outline-white px-5 py-2 ${
+            className={`w-full mt-2 rounded-sm text-sm bg-transparent outline outline-1 outline-white px-5 py-2 focus:outline-[3px] ${
               groupSize ? 'text-white' : 'text-white/25'
             }`}
           >

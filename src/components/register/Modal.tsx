@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
+import star from '../../assets/images/register/modal-star.svg';
 import registrationSuccessfulImg from '../../assets/images/register/register-successful.svg';
 import { usePortal } from '../../hooks/usePortal';
 import { getFocusableElements, nextFocusable } from '../../utils/utils';
@@ -47,7 +48,7 @@ const Modal = ({
 
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
-      if (!open) return;
+      if (!isModalOpen) return;
 
       switch (e.key) {
         case 'Escape': {
@@ -64,7 +65,7 @@ const Modal = ({
 
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
-  }, [closeModal]);
+  }, [isModalOpen, closeModal]);
 
   return createPortal(
     <div
@@ -84,7 +85,7 @@ const Modal = ({
 
       {/* Modal content */}
       <div
-        className="w-[80vw] text-center gap-5 h-fit outline outline-2 outline-[var(--color-3)] rounded-sm z-40 flex flex-col place-items-center pb-10 px-8 lg:pb-16 lg:px-11 lg:w-[50vw]"
+        className="relative w-[80vw] text-center gap-5 h-fit outline outline-2 outline-[var(--color-3)] rounded-sm z-40 flex flex-col place-items-center pb-10 px-8 lg:pb-16 lg:px-11 lg:w-[50vw]"
         ref={container}
       >
         <img src={registrationSuccessfulImg} alt="" />
@@ -99,6 +100,12 @@ const Modal = ({
         <button className="btn capitalize w-full" onClick={closeModal}>
           back
         </button>
+
+        <img
+          src={star}
+          alt=""
+          className="absolute w-[4vw] -top-5 -right-5 sm:w-[3vw] sm:-top-6 sm:-right-6 md:w-[2vw] lg:w-auto"
+        />
       </div>
     </div>,
     portal.current
