@@ -30,10 +30,10 @@ const RegisterForm = ({ openModal }: { openModal: () => void }) => {
   };
 
   const fetchCategories = async () => {
-    const { success, data, error } = await getCategories();
+    const { data, error } = await getCategories();
 
-    if (!success) {
-      Notify.failure(`Unable to fetch categories: ${error?.message}`);
+    if (error) {
+      Notify.failure(`Unable to fetch categories: ${error.message}`);
       return;
     }
 
@@ -56,7 +56,7 @@ const RegisterForm = ({ openModal }: { openModal: () => void }) => {
     }
 
     Loading.hourglass();
-    const { success, error } = await register({
+    const { error } = await register({
       category,
       email,
       group_size: groupSize,
@@ -67,18 +67,23 @@ const RegisterForm = ({ openModal }: { openModal: () => void }) => {
     });
     Loading.remove();
 
-    if (!success) {
+    if (error) {
       type ResponseData = { string: Array<string> };
 
-      const responseData: ResponseData = error?.response?.data as ResponseData;
+      const responseData: ResponseData = error.response?.data as ResponseData;
       let errorString = '';
 
       for (const key in responseData) {
         const errors: Array<string> = responseData[key as keyof ResponseData];
-        return (errorString = errors[0]);
+        errorString = errors[0];
+        break;
       }
 
-      Report.failure('Unable to register', errorString, 'Okay');
+      Report.failure(
+        'Unable to register',
+        errorString || error.message || 'An error occurred',
+        'Okay'
+      );
       return;
     }
 

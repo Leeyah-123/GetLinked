@@ -163,7 +163,7 @@ const Section2 = () => {
     }
 
     Loading.hourglass();
-    const { success, error, data } = await contact({
+    const { error } = await contact({
       email,
       first_name: firstName,
       phone_number: phoneNum,
@@ -171,24 +171,28 @@ const Section2 = () => {
     });
     Loading.remove();
 
-    if (!success) {
+    if (error) {
       type ResponseData = { string: Array<string> };
 
-      const responseData: ResponseData = error?.response?.data as ResponseData;
+      const responseData: ResponseData = error.response?.data as ResponseData;
       let errorString = '';
 
       for (const key in responseData) {
         const errors: Array<string> = responseData[key as keyof ResponseData];
-        return (errorString = errors[0]);
+        errorString = errors[0];
+        break;
       }
 
-      Report.failure('An error occurred', errorString, 'Okay');
+      Report.failure(
+        'An error occurred',
+        errorString || error.message || 'An error occurred',
+        'Okay'
+      );
       return;
     }
 
     Notify.success('Successfully sent message');
     resetFields();
-    console.log(data);
   };
 
   return (
