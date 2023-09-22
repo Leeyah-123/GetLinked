@@ -1,7 +1,7 @@
-import { MdLocationOn, MdPhoneInTalk } from 'react-icons/md'
-import { Link } from 'react-router-dom'
-import Logo from './Logo'
-import { socialLinks } from '../utils/utils'
+import { MdLocationOn, MdPhoneInTalk } from 'react-icons/md';
+import { Link } from 'react-router-dom';
+import Logo from './Logo';
+import { socialLinks } from '../utils/utils';
 
 const Footer = () => {
   return (
@@ -12,15 +12,15 @@ const Footer = () => {
           <Logo className="" />
 
           <p className="">
-            Getlinked Tech Hackathon is a technology innovation program established by a
-            group of organizations with the aim of showcasing young and talented
-            individuals in the field of technology.
+            Getlinked Tech Hackathon is a technology innovation program
+            established by a group of organizations with the aim of showcasing
+            young and talented individuals in the field of technology.
           </p>
         </div>
 
         <div className="divide-x-4 divide-[var(--color-3)] text-[var(--color-3)] grid grid-cols-2 text-center md:w-[80%] lg:w-[50%] mt-auto">
-          <Link to="/">Terms of Use</Link>
-          <Link to="/">Privacy Policy</Link>
+          <Link to="#">Terms of Use</Link>
+          <Link to="#">Privacy Policy</Link>
         </div>
       </div>
 
@@ -45,7 +45,7 @@ const Footer = () => {
               <span className="text-magenta text-sm">Follow us</span>
               {socialLinks.map(({ Icon, link }, index) => (
                 <span key={index}>
-                  <Link to={link}>
+                  <Link to={link} className="icon">
                     <Icon size={25} />
                   </Link>
                 </span>
@@ -81,7 +81,7 @@ const Footer = () => {
         All rights reserved.&copy; getLinked Ltd
       </p>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

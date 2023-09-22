@@ -27,6 +27,7 @@
     @apply font-["Montserrat",sans-serif] bg-[var(--navy-blue)] text-white max-w-[100vw] overflow-x-hidden;
   }
   a:not(.btn, .back-btn):hover,
+  a:not(.btn, .back-btn):active,
   a:not(.btn, .back-btn).active,
   a:not(.btn, .back-btn):focus,
   a:not(svg):hover,
