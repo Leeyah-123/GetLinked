@@ -1,5 +1,5 @@
-import sponsors from '../assets/images/home/Partner and sponsors section.png'
-import SectionContainer from '../components/SectionContainer'
+import sponsors from '../assets/images/home/Partner and sponsors section.svg';
+import SectionContainer from '../components/SectionContainer';
 
 const Partners = () => {
   return (
@@ -14,8 +14,8 @@ const Partners = () => {
       <div className="h-44 md:h-64 lg:h-[600px] mt-12">
         <img src={sponsors} alt="sponsors" className="w-full h-full" />
       </div>
-    </section>
-  )
-}
+    </SectionContainer>
+  );
+};
 
 export default Partners;

@@ -1,6 +1,6 @@
-import goldenCup from '../assets/images/home/9486889 1.png'
-import awards from '../assets/images/home/Rewards.png'
-import SectionContainer from '../components/SectionContainer'
+import goldenCup from '../assets/images/home/9486889 1.png';
+import awards from '../assets/images/home/Rewards.svg';
+import SectionContainer from '../components/SectionContainer';
 
 const Rewards = () => {
   return (
@@ -31,8 +31,8 @@ const Rewards = () => {
           />
         </div>
       </div>
-    </section>
-  )
-}
+    </SectionContainer>
+  );
+};
 
 export default Rewards;
