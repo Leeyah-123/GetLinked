@@ -17,7 +17,7 @@ const Timeline = () => {
         </p>
         <section className="hidden sm:block">
           {timelines.map(({ date, description, title }, index) =>
-            index % 2 !== 0 ? (
+            index % 2 === 0 ? (
               <TimelineLeft
                 key={index}
                 title={title}
@@ -25,7 +25,7 @@ const Timeline = () => {
                 date={date}
                 index={index + 1}
                 start={index === 0}
-                end={index === timelines.length}
+                end={index === timelines.length - 1}
               />
             ) : (
               <TimelineRight
@@ -35,7 +35,7 @@ const Timeline = () => {
                 date={date}
                 index={index + 1}
                 start={index === 0}
-                end={index === timelines.length}
+                end={index === timelines.length - 1}
               />
             )
           )}

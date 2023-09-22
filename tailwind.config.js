@@ -10,7 +10,7 @@ export default {
         'muted-purple': '#100B20',
       },
       backgroundImage: {
-        header_image: 'url("./src/assets/virtua;.png")',
+        privacy_image: 'url("./src/assets/images/Vector.png")',
       },
     },
   },
