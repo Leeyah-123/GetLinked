@@ -32,27 +32,33 @@ export const criterias = [
 export const faqs = [
   {
     question: 'Can I work on a project I started before the hackathon?',
-    answer: '',
+    answer:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam odio voluptatibus recusandae, quos a, laborum at tempore sunt ipsum eos aliquid vero facere! Veniam totam natus distinctio quod reprehenderit nihil!',
   },
   {
     question: 'What happens if I need help during the hackathon?',
-    answer: '',
+    answer:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam odio voluptatibus recusandae, quos a, laborum at tempore sunt ipsum eos aliquid vero facere! Veniam totam natus distinctio quod reprehenderit nihil!',
   },
   {
     question: "What happens if I don't have an idea for a project?",
-    answer: '',
+    answer:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam odio voluptatibus recusandae, quos a, laborum at tempore sunt ipsum eos aliquid vero facere! Veniam totam natus distinctio quod reprehenderit nihil!',
   },
   {
     question: 'Can I join a team or do I have to come with one?',
-    answer: '',
+    answer:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam odio voluptatibus recusandae, quos a, laborum at tempore sunt ipsum eos aliquid vero facere! Veniam totam natus distinctio quod reprehenderit nihil!',
   },
   {
     question: 'What happens after the hackathon ends',
-    answer: '',
+    answer:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam odio voluptatibus recusandae, quos a, laborum at tempore sunt ipsum eos aliquid vero facere! Veniam totam natus distinctio quod reprehenderit nihil!',
   },
   {
     question: 'Can I work on a project I started before the hackathon?',
-    answer: '',
+    answer:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam odio voluptatibus recusandae, quos a, laborum at tempore sunt ipsum eos aliquid vero facere! Veniam totam natus distinctio quod reprehenderit nihil!',
   },
 ]
 
