@@ -55,9 +55,9 @@ export const TimelineRight = ({ title, content, index, date, end }: Timeline) =>
 
 export const TimelineMobile = ({ title, content, index, date }: Timeline) => {
   return (
-    <div className="grid grid-cols-[36px_1fr] mb-5">
+    <div className="grid grid-cols-[36px_1fr]">
       <div className="flex justify-center relative">
-        <div className="h-[40px] w-[40px] rounded-full p-2 grid place-items-center text-white timeline-gradient-circle text-sm font-bold self-end relative z-[1] border-[6px] border-[#150E28]">
+        <div className="h-[40px] w-[40px] rounded-full grid place-items-center text-white timeline-gradient-circle text-sm font-bold self-end relative z-[1] border-[6px] border-[#150E28]">
           {index}
         </div>
         <div className={`absolute w-[4px] h-full bg-magenta`}></div>
