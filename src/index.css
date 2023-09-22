@@ -28,7 +28,9 @@
   }
   a:not(.btn, .back-btn):hover,
   a:not(.btn, .back-btn).active,
-  a:not(.btn, .back-btn):focus {
+  a:not(.btn, .back-btn):focus,
+  a:not(svg):hover,
+  a:not(svg):focus {
     @apply transition-colors duration-300 bg-gradient-to-r from-[var(--color-1)] to-[var(--color-2)] text-transparent bg-clip-text;
   }
 }
