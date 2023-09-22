@@ -1,5 +1,5 @@
-import { ReactNode, useCallback, useEffect, useState } from 'react'
-import { motion, useAnimation } from 'framer-motion'
+import { ReactNode } from 'react'
+import { motion } from 'framer-motion'
 // import { sectionVariants } from '../utils/framer-motion'
 
 interface SectionInterface {
