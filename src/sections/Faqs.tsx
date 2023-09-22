@@ -1,20 +1,20 @@
-import { useState } from 'react'
-import faq_image from '../assets/images/home/cwok_casual_21 1.png'
-import { faqs } from '../utils/utils'
-import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
-import { AnimatePresence, motion } from 'framer-motion'
-import SectionContainer from '../components/SectionContainer'
+import { useState } from 'react';
+import faq_image from '../assets/images/home/cwok_casual_21 1.svg';
+import { faqs } from '../utils/utils';
+import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
+import { AnimatePresence, motion } from 'framer-motion';
+import SectionContainer from '../components/SectionContainer';
 
 const Faqs = () => {
-  const [activeFaq, setActiveFaq] = useState<number | null>(null)
+  const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
   const handleFaq = (index: number) => {
     if (index === activeFaq) {
-      setActiveFaq(null)
+      setActiveFaq(null);
     } else {
-      setActiveFaq(index)
+      setActiveFaq(index);
     }
-  }
+  };
 
   return (
     <SectionContainer id="faqs" position="right">
@@ -33,19 +33,27 @@ const Faqs = () => {
         <div className="">
           {faqs.map(({ answer, question }, index) => (
             <div key={index} className="my-10">
-              <div
-                className="flex justify-between border-b border-magenta pb-3 cursor-pointer"
+              <button
+                aria-controls={`panel${index + 1}-content`}
+                aria-expanded={index === activeFaq}
+                className="flex w-full justify-between border-b border-magenta pb-3 cursor-pointer"
                 onClick={() => handleFaq(index)}
               >
-                <p className="leading-tight">{question}</p>
-                <span className="text-magenta">
+                <p id={`panel${index + 1}-heading`} className="leading-tight">
+                  {question}
+                </p>
+                <span className="text-magenta ml-2" aria-hidden="true">
                   {index === activeFaq ? <AiOutlineMinus /> : <AiOutlinePlus />}
                 </span>
-              </div>
+              </button>
 
               <AnimatePresence>
                 {index === activeFaq ? (
                   <motion.div
+                    id={`panel${index + 1}-content`}
+                    role="region"
+                    aria-hidden={false}
+                    aria-labelledby={`panel${index + 1}-heading`}
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
@@ -63,7 +71,7 @@ const Faqs = () => {
 
       <img src={faq_image} alt="" className="h-full w-[700px]" />
     </SectionContainer>
-  )
-}
+  );
+};
 
-export default Faqs
+export default Faqs;
