@@ -13,9 +13,9 @@ const Hero = () => {
         <img src={curve} alt="" className="w-60" />
       </div>
 
-      <div className="flex justify-between items-center flex-col lg:flex-row">
+      <div className="flex justify-between items-start flex-col lg:flex-row">
         <div>
-          <div className="space-y-6 max-w-fit bg-auto mt-auto">
+          <div className="space-y-6 max-w-fit bg-auto">
             <p className="text-5xl font-semibold md:text-8xl mt-20">
               getLinked Tech <br /> Hackathon <span className="text-magenta">1.0</span>
             </p>
@@ -27,7 +27,7 @@ const Hero = () => {
             <Button className="px-10 py-3">Register</Button>
           </div>
 
-          <p className="space-x-5 mt-10 text-4xl">
+          <p className="space-x-5 mt-10 lg:mt-40 text-4xl">
             <span>
               00<span className="text-base">H</span>
             </span>
