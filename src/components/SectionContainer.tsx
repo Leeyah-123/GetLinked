@@ -1,5 +1,5 @@
-import { ReactNode, useCallback, useEffect } from 'react'
-import { motion, useAnimation } from 'framer-motion'
+import { ReactNode } from 'react'
+import { motion } from 'framer-motion'
 // import { sectionVariants } from '../utils/framer-motion'
 
 interface SectionInterface {
@@ -10,16 +10,6 @@ interface SectionInterface {
 }
 
 const SectionContainer = ({ children, className, position, id }: SectionInterface) => {
-  const controls = useAnimation()
-
-  const onScreen = useCallback(async () => {
-    await controls.start('animate')
-  }, [controls])
-
-  useEffect(() => {
-    onScreen()
-  }, [onScreen])
-
   const display = () => {
     return position === 'left' ? 'flex-col lg:flex-row-reverse' : 'flex-col lg:flex-row'
   }
@@ -31,6 +21,7 @@ const SectionContainer = ({ children, className, position, id }: SectionInterfac
       }`}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
       transition={{ duration: 1 }}
       id={id}
     >
