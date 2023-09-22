@@ -1,7 +1,7 @@
-import spark from '../assets/images/home/Image 1.png'
-import curve from '../assets/images/home/Vector 4.png'
-import guy from '../assets/images/home/virtual.png'
-import { Button } from '../components/Buttons'
+import { Link } from 'react-router-dom';
+import spark from '../assets/images/home/Image 1.png';
+import curve from '../assets/images/home/Vector 4.png';
+import guy from '../assets/images/home/virtual.png';
 
 const Hero = () => {
   return (
@@ -17,14 +17,20 @@ const Hero = () => {
         <div>
           <div className="space-y-6 max-w-fit bg-auto">
             <p className="text-5xl font-semibold xl:text-8xl mt-20">
-              getLinked Tech <br /> Hackathon <span className="text-magenta">1.0</span>
+              getLinked Tech <br /> Hackathon{' '}
+              <span className="text-magenta">1.0</span>
             </p>
             <p className="font-semibold">
-              Participate in getlinked tech Hackathon 2023 stand a chance to win a Big
-              prize
+              Participate in getlinked tech Hackathon 2023 stand a chance to win
+              a Big prize
             </p>
 
-            <Button className="px-10 py-3">Register</Button>
+            <Link
+              to="/register"
+              className={`btn inline-block transition-transform hover:scale-[1.05] focus:scale-[1.05]`}
+            >
+              Register
+            </Link>
           </div>
 
           <p className="space-x-5 mt-10 xl:mt-20 text-6xl font-unica">
@@ -41,7 +47,12 @@ const Hero = () => {
         </div>
 
         <div className="relative">
-          <img draggable={false} src={guy} alt="" className="sm:static opacity-70" />
+          <img
+            draggable={false}
+            src={guy}
+            alt=""
+            className="sm:static opacity-70"
+          />
           <img
             draggable={false}
             src={spark}
@@ -51,7 +62,7 @@ const Hero = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

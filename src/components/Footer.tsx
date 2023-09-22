@@ -1,7 +1,7 @@
 import { MdLocationOn, MdPhoneInTalk } from 'react-icons/md';
 import { Link } from 'react-router-dom';
-import Logo from './Logo';
 import { socialLinks } from '../utils/utils';
+import Logo from './Logo';
 
 const Footer = () => {
   return (
@@ -46,7 +46,10 @@ const Footer = () => {
               {socialLinks.map(({ Icon, link }, index) => (
                 <span key={index}>
                   <Link to={link} className="icon">
-                    <Icon size={25} />
+                    <Icon
+                      size={25}
+                      className="transition-transform hover:scale-105 focus:scale-105"
+                    />
                   </Link>
                 </span>
               ))}
