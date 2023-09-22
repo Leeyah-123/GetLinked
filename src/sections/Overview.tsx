@@ -1,6 +1,6 @@
 import bigIdea from '../assets/images/The big idea.png'
 
-const Introduction = () => {
+const Overview = () => {
   return (
     <section
       id="overview"
@@ -28,4 +28,4 @@ const Introduction = () => {
   )
 }
 
-export default Introduction
+export default Overview

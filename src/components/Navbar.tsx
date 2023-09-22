@@ -99,15 +99,6 @@ const Navbar = () => {
           >
             <li>
               <Link
-                to="/#timeline"
-                className={`${location.hash === '#timeline' && 'active'}`}
-                onClick={toggleNav}
-              >
-                timeline
-              </Link>
-            </li>
-            <li>
-              <Link
                 to="/#overview"
                 className={`${location.hash === '#overview' && 'active'}`}
                 onClick={toggleNav}
@@ -122,6 +113,15 @@ const Navbar = () => {
                 onClick={toggleNav}
               >
                 faqs
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/#timeline"
+                className={`${location.hash === '#timeline' && 'active'}`}
+                onClick={toggleNav}
+              >
+                timeline
               </Link>
             </li>
             <li>
@@ -148,14 +148,6 @@ const Navbar = () => {
             <ul className="inline-flex space-x-5 capitalize">
               <li>
                 <Link
-                  to="/#timeline"
-                  className={`${location.hash === '#timeline' && 'active'}`}
-                >
-                  timeline
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/#overview"
                   className={`${location.hash === '#overview' && 'active'}`}
                 >
@@ -165,6 +157,14 @@ const Navbar = () => {
               <li>
                 <Link to="/#faqs" className={`${location.hash === '#faqs' && 'active'}`}>
                   faqs
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/#timeline"
+                  className={`${location.hash === '#timeline' && 'active'}`}
+                >
+                  timeline
                 </Link>
               </li>
               <li>
