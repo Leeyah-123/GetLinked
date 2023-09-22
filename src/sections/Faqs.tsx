@@ -16,7 +16,7 @@ const Faqs = () => {
   }
 
   return (
-    <section className="flex flex-col lg:flex-row pb-10 items-center justify-around space-y-10 md:space-y-0 min-h-[700px]">
+    <section id='faqs' className="flex flex-col lg:flex-row pb-10 items-center justify-around space-y-10 md:space-y-0 min-h-[700px]">
       {/*  */}
       <div className="grow space-y-5 max-w-xl text-center md:text-left">
         <h5 className="text-4xl font-semibold">

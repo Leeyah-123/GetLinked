@@ -7,7 +7,7 @@ import { timelines } from '../utils/utils'
 
 const Timeline = () => {
   return (
-    <section className="border-b-[1px] border-[#ffffff2e] pb-10">
+    <section id="timeline" className="border-b-[1px] border-[#ffffff2e] pb-10">
       <div className="">
         <div className="w-full max-w-[346px] mx-auto text-center text-white mb-20">
           <h1 className="text-[32px] font-bold mb-2">Timeline</h1>

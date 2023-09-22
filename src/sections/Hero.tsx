@@ -27,7 +27,7 @@ const Hero = () => {
             <Button className="px-10 py-3">Register</Button>
           </div>
 
-          <p className="space-x-5 mt-10 xl:mt-40 text-6xl font-unica">
+          <p className="space-x-5 mt-10 xl:mt-20 text-6xl font-unica">
             <span>
               00<span className="text-base">H</span>
             </span>
