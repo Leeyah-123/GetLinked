@@ -1,3 +1,6 @@
+import { RiTwitterXFill } from 'react-icons/ri'
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
+
 export const criterias = [
   {
     title: 'innovation and creativity',
@@ -88,5 +91,24 @@ export const timelines = [
     description:
       'Teams get the opportunity to pitch their projects to judges. The winner of the hackathon will also be announced on this day',
     date: 'November 18, 2023',
+  },
+]
+
+export const socialLinks = [
+  {
+    link: '',
+    Icon: FaInstagram,
+  },
+  {
+    link: '',
+    Icon: RiTwitterXFill,
+  },
+  {
+    link: '',
+    Icon: FaFacebookF,
+  },
+  {
+    link: '',
+    Icon: FaLinkedinIn,
   },
 ]
