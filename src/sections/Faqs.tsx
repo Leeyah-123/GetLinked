@@ -2,6 +2,7 @@ import { useState } from 'react'
 import faq_image from '../assets/images/cwok_casual_21 1.png'
 import { faqs } from '../utils/utils'
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
+import { AnimatePresence, motion } from 'framer-motion'
 
 const Faqs = () => {
   const [activeFaq, setActiveFaq] = useState<number | null>(null)
@@ -15,7 +16,7 @@ const Faqs = () => {
   }
 
   return (
-    <section className="flex flex-col lg:flex-row pb-10 items-center justify-around space-y-10 md:space-y-0 min-h-[700px]">
+    <section id='faqs' className="flex flex-col lg:flex-row pb-10 items-center justify-around space-y-10 md:space-y-0 min-h-[700px]">
       {/*  */}
       <div className="grow space-y-5 max-w-xl text-center md:text-left">
         <h5 className="text-4xl font-semibold">
@@ -41,7 +42,19 @@ const Faqs = () => {
                 </span>
               </div>
 
-              {index === activeFaq ? <div>{answer}</div> : null}
+              <AnimatePresence>
+                {index === activeFaq ? (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    className="mt-3"
+                    transition={{ duration: 0.5 }}
+                  >
+                    {answer}
+                  </motion.div>
+                ) : null}
+              </AnimatePresence>
             </div>
           ))}
         </div>

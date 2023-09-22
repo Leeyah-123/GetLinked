@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+// const defaultTheme = require('tailwindcss/defaultTheme');
+// import defaultTheme from 'tailwindcss/defaultTheme'
+
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
@@ -11,6 +14,9 @@ export default {
       },
       backgroundImage: {
         privacy_image: 'url("./src/assets/images/Vector.png")',
+      },
+      fontFamily: {
+        unica: ['"Unica One"', 'cursive'],
       },
     },
   },

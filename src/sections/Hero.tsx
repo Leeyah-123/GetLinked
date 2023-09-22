@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="flex justify-between items-start flex-col lg:flex-row">
         <div>
           <div className="space-y-6 max-w-fit bg-auto">
-            <p className="text-5xl font-semibold md:text-8xl mt-20">
+            <p className="text-5xl font-semibold xl:text-8xl mt-20">
               getLinked Tech <br /> Hackathon <span className="text-magenta">1.0</span>
             </p>
             <p className="font-semibold">
@@ -27,7 +27,7 @@ const Hero = () => {
             <Button className="px-10 py-3">Register</Button>
           </div>
 
-          <p className="space-x-5 mt-10 lg:mt-40 text-4xl">
+          <p className="space-x-5 mt-10 xl:mt-20 text-6xl font-unica">
             <span>
               00<span className="text-base">H</span>
             </span>
