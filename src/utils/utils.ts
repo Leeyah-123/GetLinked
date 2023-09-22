@@ -1,5 +1,5 @@
-import { RiTwitterXFill } from 'react-icons/ri'
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
+import { RiTwitterXFill } from 'react-icons/ri';
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 export const criterias = [
   {
@@ -27,7 +27,7 @@ export const criterias = [
     description:
       'Judges will Ensure that the team adhered to the rules and guidelines of the hackathon, including deadlines, use of specific technologies or APIs, and any other competition-specific requirements.',
   },
-]
+];
 
 export const faqs = [
   {
@@ -60,7 +60,7 @@ export const faqs = [
     answer:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam odio voluptatibus recusandae, quos a, laborum at tempore sunt ipsum eos aliquid vero facere! Veniam totam natus distinctio quod reprehenderit nihil!',
   },
-]
+];
 
 export const timelines = [
   {
@@ -98,7 +98,7 @@ export const timelines = [
       'Teams get the opportunity to pitch their projects to judges. The winner of the hackathon will also be announced on this day',
     date: 'November 18, 2023',
   },
-]
+];
 
 export const socialLinks = [
   {
@@ -117,4 +117,48 @@ export const socialLinks = [
     link: '',
     Icon: FaLinkedinIn,
   },
-]
+];
+
+export const getFocusableElements = (
+  parent?: HTMLElement | null
+): HTMLElement[] => {
+  if (!parent) return [];
+
+  return (
+    Array.from(
+      parent.querySelectorAll(
+        'a[href], button, input, textarea, select, details,[tabindex]'
+      )
+    )
+      .filter(
+        (el) =>
+          el.getAttribute('tabindex') !== '-1' &&
+          !el.hasAttribute('disabled') &&
+          !el.getAttribute('aria-hidden')
+      )
+      // sort tabindexes
+      .sort((a, b) => {
+        const aIndex = Number(a.getAttribute('tabindex')) ?? 0; // no `tabindex` means `tabindex=0` on a focusable element
+        const bIndex = Number(b.getAttribute('tabindex')) ?? 0;
+        if (aIndex === bIndex) return 0;
+        if (aIndex === 0) return 1;
+        if (bIndex === 0) return -1;
+        return aIndex < bIndex ? -1 : 1;
+      }) as HTMLElement[]
+  );
+};
+
+export const nextFocusable = (elements: HTMLElement[], forward = true) => {
+  const currentIndex = elements.findIndex((e) => e === document.activeElement);
+  let nextIndex = 0;
+
+  if (currentIndex > -1) {
+    if (forward) {
+      nextIndex = currentIndex < elements.length - 1 ? currentIndex + 1 : 0;
+    } else {
+      nextIndex = currentIndex > 0 ? currentIndex - 1 : elements.length - 1;
+    }
+  }
+
+  elements[nextIndex]?.focus();
+};
