@@ -1,8 +1,9 @@
-import guide from '../assets/images/7450159 1.png'
+import guide from '../assets/images/home/7450159 1.png'
+import SectionContainer from '../components/SectionContainer'
 
 const RulesAndGuide = () => {
   return (
-    <section className="flex flex-col lg:flex-row-reverse pb-10 items-center justify-around space-y-10 md:space-y-0 min-h-[700px]">
+    <SectionContainer position="left">
       <img src={guide} alt="" className="" />
 
       {/*  */}
@@ -21,7 +22,7 @@ const RulesAndGuide = () => {
           we&apos;re all about!
         </h6>
       </div>
-    </section>
+    </SectionContainer>
   )
 }
 

@@ -1,6 +1,6 @@
-import spark from '../assets/images/Image 1.png'
-import curve from '../assets/images/Vector 4.png'
-import guy from '../assets/images/virtual.png'
+import spark from '../assets/images/home/Image 1.png'
+import curve from '../assets/images/home/Vector 4.png'
+import guy from '../assets/images/home/virtual.png'
 import { Button } from '../components/Buttons'
 
 const Hero = () => {

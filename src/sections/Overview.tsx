@@ -1,11 +1,9 @@
-import bigIdea from '../assets/images/The big idea.png'
+import bigIdea from '../assets/images/home/The big idea.png'
+import SectionContainer from '../components/SectionContainer'
 
 const Overview = () => {
   return (
-    <section
-      id="overview"
-      className="flex flex-col lg:flex-row pb-10 items-center justify-around space-y-10 md:space-y-0 min-h-[700px]"
-    >
+    <SectionContainer id="overview" position="right">
       <img src={bigIdea} alt="" className="" />
 
       {/*  */}
@@ -24,7 +22,7 @@ const Overview = () => {
           we&apos;re all about!
         </h6>
       </div>
-    </section>
+    </SectionContainer>
   )
 }
 

@@ -1,8 +1,9 @@
 import { useState } from 'react'
-import faq_image from '../assets/images/cwok_casual_21 1.png'
+import faq_image from '../assets/images/home/cwok_casual_21 1.png'
 import { faqs } from '../utils/utils'
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
 import { AnimatePresence, motion } from 'framer-motion'
+import SectionContainer from '../components/SectionContainer'
 
 const Faqs = () => {
   const [activeFaq, setActiveFaq] = useState<number | null>(null)
@@ -16,7 +17,7 @@ const Faqs = () => {
   }
 
   return (
-    <section id='faqs' className="flex flex-col lg:flex-row pb-10 items-center justify-around space-y-10 md:space-y-0 min-h-[700px]">
+    <SectionContainer id="faqs" position="right">
       {/*  */}
       <div className="grow space-y-5 max-w-xl text-center md:text-left">
         <h5 className="text-4xl font-semibold">
@@ -61,7 +62,7 @@ const Faqs = () => {
       </div>
 
       <img src={faq_image} alt="" className="h-full w-[700px]" />
-    </section>
+    </SectionContainer>
   )
 }
 

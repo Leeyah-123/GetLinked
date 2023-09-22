@@ -1,10 +1,11 @@
-import criteriaImg from '../assets/images/8046554 1.png'
+import criteriaImg from '../assets/images/home/8046554 1.png'
 import { Button } from '../components/Buttons'
+import SectionContainer from '../components/SectionContainer'
 import { criterias } from '../utils/utils'
 
 const Criteria = () => {
   return (
-    <section className="flex flex-col lg:flex-row pb-10 items-center justify-around space-y-10 md:space-y-0 min-h-[700px]">
+    <SectionContainer position="right">
       <img src={criteriaImg} alt="" className="" />
 
       {/*  */}
@@ -26,7 +27,7 @@ const Criteria = () => {
         </div>
         <Button>Read More</Button>
       </div>
-    </section>
+    </SectionContainer>
   )
 }
 
