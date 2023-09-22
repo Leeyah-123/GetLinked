@@ -1,6 +1,6 @@
 import { ReactNode, useCallback, useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
-import { sectionVariants } from '../utils/framer-motion'
+// import { sectionVariants } from '../utils/framer-motion'
 
 interface SectionInterface {
   children: ReactNode | ReactNode[]

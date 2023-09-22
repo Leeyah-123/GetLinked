@@ -13,7 +13,8 @@ const Rewards = () => {
               <span className="text-magenta">Rewards</span>
             </h5>
             <p className="my-5 max-w-sm">
-              Highlight of the prizes or rewards for winners and for participants.
+              Highlight of the prizes or rewards for winners and for
+              participants.
             </p>
           </div>
           <div className="flex flex-col justify-center">
@@ -23,11 +24,15 @@ const Rewards = () => {
         </div>
 
         <div className="hidden lg:flex flex-1">
-          <img src={goldenCup} alt="award cup" className="w-[500px] h-[500px]" />
+          <img
+            src={goldenCup}
+            alt="award cup"
+            className="w-[500px] h-[500px]"
+          />
         </div>
       </div>
-    </SectionContainer>
+    </section>
   )
 }
 
-export default Rewards
+export default Rewards;
