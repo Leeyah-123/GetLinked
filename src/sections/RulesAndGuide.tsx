@@ -9,12 +9,12 @@ const RulesAndGuide = () => {
       <img
         src={flareLeft}
         alt="purple lens flare"
-        className="absolute pointer-events-none -left-20 top-0 lg:-top-80 lg:left-0 mix-blend-hard-light"
+        className="absolute pointer-events-none -left-20 -top-5 lg:-top-80 lg:left-0 mix-blend-hard-light -z-10"
       />
       <img
         src={flareRight}
         alt="purple lens flare"
-        className="absolute pointer-events-none bottom-0 right-0 lg:-bottom-1/2 lg:-right-56 mix-blend-hard-light"
+        className="absolute pointer-events-none bottom-0 right-0 lg:-bottom-1/2 lg:-right-56 mix-blend-hard-light -z-10"
       />
 
       <img src={guide} alt="" className="" />

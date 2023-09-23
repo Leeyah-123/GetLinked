@@ -7,8 +7,8 @@ const Overview = () => {
       <img src={bigIdea} alt="" className="" />
 
       {/*  */}
-      <div className="grow space-y-5 text-center md:text-left lg:text-sm">
-        <h5 className="text-xl font-bold clash-display lg:text-3xl">
+      <div className="space-y-5 text-center md:text-left lg:text-sm">
+        <h5>
           Introduction to getlinked <br />
           <span className="text-magenta">techHackathon 1.0</span>
         </h5>

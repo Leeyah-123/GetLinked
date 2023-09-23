@@ -8,7 +8,7 @@ function App() {
     <div className="flex flex-col">
       <Navbar />
       <ScrollHandler />
-      <main className="[&>section]:px-10 [&>section]:py-10 [&>section]:md:px-20 [&>section]:lg:px-30 [&>section]:border-b [&>section]:border-b-slate-800">
+      <main className="w-[revert] [&>section]:px-10 [&>section]:py-10 [&>section]:md:px-20 [&>section]:lg:px-30 [&>section]:border-b [&>section]:border-b-slate-800">
         <Outlet />
       </main>
       <Footer />

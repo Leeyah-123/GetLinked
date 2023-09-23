@@ -1,14 +1,27 @@
 import goldenCup from '../assets/images/home/9486889 1.png';
 import awards from '../assets/images/home/Rewards.svg';
 import SectionContainer from '../components/SectionContainer';
+import flareRight from '../assets/images/home/flare-right.svg';
+import flareLeft from '../assets/images/home/flare-left.svg';
 
 const Rewards = () => {
   return (
-    <SectionContainer className="text-[3.4vw] py-12 text-center lg:text-left lg:text-sm">
-      <div className="flex flex-col lg:flex-row-reverse md:items-center md:text-left gap-16">
+    <SectionContainer className="text-center lg:text-left">
+      <img
+        src={flareLeft}
+        alt="purple lens flare"
+        className="absolute pointer-events-none -left-20 top-0 lg:-top-32 lg:left-0 mix-blend-hard-light -z-10"
+      />
+      <img
+        src={flareRight}
+        alt="purple lens flare"
+        className="absolute pointer-events-none -bottom-20 right-0 lg:-bottom-[50%] lg:-right-40 mix-blend-hard-light -z-20"
+      />
+
+      <div className="flex flex-col lg:flex-row-reverse md:items-center md:text-left gap-16 lg:pb-14">
         <div className="lg:flex-1">
           <div>
-            <h5 className="text-xl font-bold clash-display lg:text-3xl">
+            <h5>
               Prizes and <br />
               <span className="text-magenta">Rewards</span>
             </h5>

@@ -3,6 +3,7 @@ import lock from '../assets/images/home/Vector.png';
 import check from '../assets/images/home/list terms.png';
 import { Button } from '../components/Buttons';
 import SectionContainer from '../components/SectionContainer';
+import flareLeft from '../assets/images/home/flare-left.svg';
 
 const Privacy = () => {
   return (
@@ -19,14 +20,14 @@ const Privacy = () => {
                 Last updated on September 12, 2023
               </small>
 
-              <p className="text-[3.4vw] mt-10 font-medium lg:text-sm">
+              <p className="mt-10 font-medium">
                 Below are our privacy & policy, which outline a lot of goodies.
                 it’s our aim to always take of our participant
               </p>
             </div>
 
-            <div className="font-medium border-[1px] border-[var(--color-3)] bg-white/[0.02] w-full max-w-[569px] py-[59px] rounded-[5px]">
-              <p className="text-white text-[3.4vw] px-[15px] lg:text-sm lg:px-[72px] leading-[30px] pb-[24px]">
+            <div className="rlative font-medium border-[1px] border-[var(--color-3)] bg-white/[0.02] w-full max-w-[569px] py-[59px] rounded-[5px]">
+              <p className="text-white px-[15px] lg:px-[72px] leading-[30px] pb-[24px]">
                 At getlinked tech Hackathon 1.0, we value your privacy and are
                 committed to protecting your personal information. This Privacy
                 Policy outlines how we collect, use, disclose, and safeguard
@@ -35,13 +36,13 @@ const Privacy = () => {
                 described in this policy.
               </p>
               <div className="pl-[22px] lg:pl-[72px] pr-[22px] lg:pr-[39px]">
-                <h1 className="text-left text-[4vw] lg:text-lg relative z-2 text-[var(--color-3)] font-bold">
+                <h1 className="text-left relative z-2 text-[var(--color-3)] font-bold">
                   Licensing Policy{' '}
                 </h1>
-                <p className="text-left text-white text-[3.5vw] lg:text-sm font-semibold leading-[30px]">
+                <p className="text-left text-white text-[3.5vw] font-semibold leading-[30px]">
                   Here are terms of our Standard License:
                 </p>
-                <ul className="flex flex-col gap-4 pt-5 pb-6 text-left text-[3.4vw] lg:text-sm">
+                <ul className="flex flex-col gap-4 pt-5 pb-6 text-left">
                   <li className="flex gap-4">
                     <img
                       src={check}
@@ -66,6 +67,12 @@ const Privacy = () => {
                   </li>
                 </ul>
                 <Button className="mx-auto">Read More</Button>
+
+                <img
+                  src={flareLeft}
+                  alt="purple lens flare"
+                  className="absolute pointer-events-none -left-10 top-[45%] lg:-left-32 lg:-bottom-1/3 mix-blend-hard-light -z-10"
+                />
               </div>
             </div>
           </section>

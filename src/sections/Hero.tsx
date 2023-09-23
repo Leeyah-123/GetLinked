@@ -15,12 +15,12 @@ const Hero = () => {
         <img
           src={flareLeft}
           alt="purple lens flare"
-          className="absolute pointer-events-none -left-10 -top-32 lg:-top-80 lg:-left-24 mix-blend-hard-light"
+          className="absolute pointer-events-none -left-10 -top-32 lg:-top-80 lg:-left-24 mix-blend-hard-light -z-10"
         />
         <img
           src={flareRight}
           alt="purple lens flare"
-          className="hidden lg:block absolute pointer-events-none -top-[6.5rem] -right-20 mix-blend-hard-light"
+          className="hidden lg:block absolute pointer-events-none -top-[6.5rem] -right-20 mix-blend-hard-light -z-10"
         />
 
         <h1 className="text-[3.5vw] lg:text-3xl font-bold italic text-white relative z-2 text-center lg:text-right">
