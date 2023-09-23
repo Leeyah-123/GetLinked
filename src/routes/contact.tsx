@@ -216,6 +216,7 @@ const Section2 = () => {
           minLength={3}
           placeholder="First Name"
           className="rounded-sm lg:rounded-md bg-transparent text-white placeholder:text-white placeholder:font-medium outline outline-1 outline-white px-5 p-2"
+          required
         />
         <input
           type="number"
@@ -234,6 +235,7 @@ const Section2 = () => {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Mail"
           className="rounded-sm lg:rounded-md bg-transparent text-white placeholder:text-white placeholder:font-medium outline outline-1 outline-white px-5 p-2"
+          required
         />
         <textarea
           name="message"
@@ -244,6 +246,7 @@ const Section2 = () => {
           rows={3}
           placeholder="Message"
           className="rounded-sm lg:rounded-md bg-transparent text-white placeholder:text-white placeholder:font-medium outline outline-1 outline-white px-5 py-2"
+          required
         />
         <button type="submit" className="btn self-center">
           Submit
