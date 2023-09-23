@@ -3,6 +3,7 @@ import chain from '../assets/images/home/chain.svg';
 import curve from '../assets/images/home/curve.svg';
 import fire from '../assets/images/home/fire.svg';
 import guy from '../assets/images/home/guy-wearing-vr.svg';
+import lightbulb from '../assets/images/home/lightbulb.svg';
 import spark from '../assets/images/home/spark.svg';
 import star1 from '../assets/images/home/star1.svg';
 import star2 from '../assets/images/home/star2.svg';
@@ -62,7 +63,19 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 pt-8 lg:pt-16 !px-0 lg:!pl-12">
           <header className="grid place-items-center gap-3 lg:place-items-start lg:flex flex-col lg:gap-5 pb-8">
             <div className="grid place-items-center text-center lg:text-left lg:block clash-display text-white text-[32px] lg:text-[80px] font-bold lg:leading-[98px] relative z-2 tracking-tight">
-              <h1>getlinked Tech</h1>
+              <div className="relative">
+                <h1>
+                  getlinked{``}
+                  <span className="ml-2 relative">
+                    Tech
+                    <img
+                      src={lightbulb}
+                      alt=""
+                      className="w-[4vw] absolute -top-[4vw] right-0 "
+                    />
+                  </span>
+                </h1>
+              </div>
               <h1>
                 Hackathon&nbsp;
                 <span className="text-[var(--color-3)] inline-block relative">
