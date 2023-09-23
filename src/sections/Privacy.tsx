@@ -78,8 +78,18 @@ const Privacy = () => {
           </section>
           <section>
             <figure className="flex relative h-full">
-              <img src={privacyImage} alt="Privacy" className="self-end" />
-              <img src={lock} alt="Safeguard" className="absolute top-0" />
+              <img
+                src={privacyImage}
+                loading="lazy"
+                alt="Privacy"
+                className="self-end"
+              />
+              <img
+                src={lock}
+                loading="lazy"
+                alt="Safeguard"
+                className="absolute top-0"
+              />
             </figure>
           </section>
         </div>

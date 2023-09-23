@@ -29,7 +29,7 @@ const RulesAndGuide = () => {
         className="w-[3vw] lg:w-auto absolute pointer-events-none top-[20%] left-10 lg:left-[40%] mix-blend-hard-light -z-10"
       />
 
-      <img src={guide} alt="" aria-hidden={true} />
+      <img src={guide} alt="" aria-hidden={true} loading="lazy" />
 
       {/*  */}
       <div className="grow max-w-xl lg:px-10 text-center md:text-left">

@@ -1,17 +1,17 @@
 import criteriaImg from '../assets/images/home/8046554 1.png';
-import { Button } from '../components/Buttons';
-import SectionContainer from '../components/SectionContainer';
-import { criterias } from '../utils/utils';
-import flareRight from '../assets/images/home/flare-right.svg';
 import flareLeft from '../assets/images/home/flare-left.svg';
+import flareRight from '../assets/images/home/flare-right.svg';
 import star1 from '../assets/images/home/star1.svg';
 import star2 from '../assets/images/home/star2.svg';
 import star3 from '../assets/images/home/star3.svg';
+import { Button } from '../components/Buttons';
+import SectionContainer from '../components/SectionContainer';
+import { criterias } from '../utils/utils';
 
 const Criteria = () => {
   return (
     <SectionContainer position="right">
-      <img src={criteriaImg} alt="" className="" />
+      <img src={criteriaImg} alt="" className="" loading="lazy" />
 
       <img
         src={flareLeft}

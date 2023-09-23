@@ -66,7 +66,7 @@ export const TimelineRight = ({
         ></div>
       </div>
       <div className="pl-[40px] md:pl-[80px] pb-5 pt-10 text-left">
-        <h1 className="text-magentatext-[var(--color-3)] text-[24px] font-bold mb-2">
+        <h1 className="text-[var(--color-3)] text-[24px] font-bold mb-2">
           {title}
         </h1>
         <p className="text-[14px] text-white">{content}</p>

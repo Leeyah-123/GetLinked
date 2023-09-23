@@ -44,22 +44,22 @@ const Partners = () => {
 
         <div className="w-full max-w-4xl mx-auto grid grid-cols-3">
           <div className="p-5 grid place-items-center border-b-[3px] border-[var(--color-3)] relative before:content-[''] before:w-12 before:h-12 before:absolute before:bottom-[-25px] before:right-[-25px] before:bg-[var(--navy-blue)]">
-            <img src={libertyImg} alt="Liberty" />
+            <img src={libertyImg} alt="Liberty" loading="lazy" />
           </div>
           <div className="p-5 grid place-items-center border-b-[3px] border-[var(--color-3)] border-l-[3px] border-r-[3px]">
-            <img src={libertyPayImg} alt="Liberty Pay" />
+            <img src={libertyPayImg} alt="Liberty Pay" loading="lazy" />
           </div>
           <div className="p-5 grid place-items-center border-b-[3px] border-[var(--color-3)] relative before:content-[''] before:w-12 before:h-12 before:absolute before:bottom-[-25px] before:left-[-25px] before:bg-[var(--navy-blue)]">
-            <img src={winwiseImg} alt="Winwise" />
+            <img src={winwiseImg} alt="Winwise" loading="lazy" />
           </div>
           <div className="p-5 grid place-items-center">
-            <img src={whisperImg} alt="Wisper" />
+            <img src={whisperImg} alt="Wisper" loading="lazy" />
           </div>
           <div className="p-5 grid place-items-center border-l-[3px] border-r-[3px] border-[var(--color-3)]">
-            <img src={payboxImg} alt="Paybox" />
+            <img src={payboxImg} alt="Paybox" loading="lazy" />
           </div>
           <div className="p-5 grid place-items-center">
-            <img src={visualPlusImg} alt="Vizual Plus" />
+            <img src={visualPlusImg} alt="Vizual Plus" loading="lazy" />
           </div>
         </div>
       </div>

@@ -31,8 +31,13 @@ const Rewards = () => {
             </p>
           </div>
           <div className="flex flex-col justify-center">
-            <img src={goldenCup} alt="award cup" className="lg:hidden my-12" />
-            <img src={awards} alt="award cup" />
+            <img
+              src={goldenCup}
+              alt="award cup"
+              className="lg:hidden my-12"
+              loading="lazy"
+            />
+            <img src={awards} alt="award cup" loading="lazy" />
           </div>
         </div>
 
@@ -40,6 +45,7 @@ const Rewards = () => {
           <img
             src={goldenCup}
             alt="award cup"
+            loading="lazy"
             className="w-[500px] h-[500px]"
           />
         </div>

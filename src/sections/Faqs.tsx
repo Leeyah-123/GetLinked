@@ -69,7 +69,7 @@ const Faqs = () => {
         </div>
       </div>
 
-      <img src={faq_image} alt="" className="h-full w-[700px]" />
+      <img src={faq_image} alt="" className="h-full w-[700px]" loading="lazy" />
     </SectionContainer>
   );
 };

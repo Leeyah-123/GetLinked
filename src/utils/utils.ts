@@ -76,7 +76,7 @@ export const timelines = [
     date: 'November 18, 2023',
   },
   {
-    title: 'Teams Registration beginsTeams Registration ends',
+    title: 'Teams Registration ends',
     description: 'Interested Participants are no longer Allowed to register',
     date: 'November 18, 2023',
   },
