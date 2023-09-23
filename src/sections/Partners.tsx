@@ -9,10 +9,12 @@ import whisperImg from '../assets/images/home/wisper.svg';
 
 const Partners = () => {
   return (
-    <SectionContainer className="flex-col px-10 md:px-20 lg:px-[300px] py-12">
+    <SectionContainer className="text-[3.4vw] flex-col px-10 md:px-20 lg:px-[300px] lg:text-sm py-12">
       <div className="md:w-[480px] text-center md:h-auto mx-auto">
-        <h2 className="font-bold text-3xl">Partners and Sponsors</h2>
-        <p className="my-5">
+        <h2 className="text-xl font-bold clash-display lg:text-3xl">
+          Partners and Sponsors
+        </h2>
+        <p className="my-3 lg:my-5 font-medium">
           Getlinked Hackathon 1.0 is honored to have the following major
           companies as its partners and sponsors
         </p>
