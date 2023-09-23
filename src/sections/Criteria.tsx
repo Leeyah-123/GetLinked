@@ -15,27 +15,27 @@ const Criteria = () => {
 
       <img
         src={flareLeft}
-        aria-hidden={true}
+        aria-hidden="true"
         className="absolute pointer-events-none -left-20 top-0 lg:top-0 lg:left-0 mix-blend-hard-light -z-10"
       />
       <img
         src={flareRight}
-        aria-hidden={true}
+        aria-hidden="true"
         className="absolute pointer-events-none bottom-0 right-0 lg:-bottom-[60%] lg:-right-0 mix-blend-hard-light -z-20"
       />
       <img
         src={star1}
-        aria-hidden={true}
+        aria-hidden="true"
         className="w-[3vw] lg:w-auto absolute pointer-events-none right-10 bottom-10 lg:right-1/2 lg:bottom-[20%] mix-blend-hard-light -z-10"
       />
       <img
         src={star2}
-        aria-hidden={true}
+        aria-hidden="true"
         className="w-[3vw] lg:w-auto absolute pointer-events-none top-[40%] left-20 mix-blend-hard-light -z-10"
       />
       <img
         src={star3}
-        aria-hidden={true}
+        aria-hidden="true"
         className="w-[3vw] lg:w-auto absolute pointer-events-none top-10 left-40 mix-blend-hard-light -z-10"
       />
 

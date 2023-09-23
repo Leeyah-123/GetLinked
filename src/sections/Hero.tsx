@@ -16,13 +16,13 @@ const Hero = () => {
       <div className="text-3.4vw lg:text-sm flex justify-center lg:justify-end relative">
         {/* Flares */}
         <img
-          aria-hidden={true}
+          aria-hidden="true"
           src={flareLeft}
           alt=""
           className="absolute pointer-events-none -left-10 -top-32 lg:-top-80 lg:-left-24 mix-blend-hard-light -z-10"
         />
         <img
-          aria-hidden={true}
+          aria-hidden="true"
           src={flareRight}
           alt=""
           className="hidden lg:block absolute pointer-events-none -top-[6.5rem] -right-20 mix-blend-hard-light -z-10"
@@ -30,25 +30,25 @@ const Hero = () => {
 
         {/* Stars */}
         <img
-          aria-hidden={true}
+          aria-hidden="true"
           src={star1}
           alt=""
           className="w-[3vw] lg:w-auto absolute pointer-events-none top-7 lg:top-0 left-28 mix-blend-hard-light -z-10"
         />
         <img
-          aria-hidden={true}
+          aria-hidden="true"
           src={star2}
           alt=""
           className="w-[3vw] lg:w-auto absolute pointer-events-none top-[15rem] right-[20%] lg:top-[30rem] lg:right-1/2 mix-blend-hard-light -z-10"
         />
         <img
-          aria-hidden={true}
+          aria-hidden="true"
           src={star2}
           alt=""
           className="w-[3vw] lg:w-auto absolute pointer-events-none top-[5rem] right-[10%] mix-blend-hard-light -z-10"
         />
 
-        <h1 className="text-[3.5vw] lg:text-3xl font-bold italic text-white relative z-2 text-center lg:text-right">
+        <h2 className="text-[3.5vw] lg:text-3xl font-bold italic text-white relative z-2 text-center lg:text-right">
           Igniting a Revolution in{' '}
           <span className="relative">
             HR Innovation{' '}
@@ -57,7 +57,7 @@ const Hero = () => {
               className="bottom-[-10px] lg:bottom-[-15px] left-[2px] absolute"
             />
           </span>
-        </h1>
+        </h2>
       </div>
       <div>
         <div className="grid lg:grid-cols-2 pt-8 lg:pt-16 !px-0 lg:!pl-12">
@@ -70,13 +70,14 @@ const Hero = () => {
                     Tech
                     <img
                       src={lightbulb}
+                      aria-hidden="true"
                       alt=""
                       className="w-[4vw] absolute -top-[4vw] right-0 "
                     />
                   </span>
                 </h1>
               </div>
-              <h1>
+              <h2>
                 Hackathon&nbsp;
                 <span className="text-[var(--color-3)] inline-block relative">
                   1.0
@@ -91,7 +92,7 @@ const Hero = () => {
                     className="inline-block mb-2 lg:mb-0 lg:absolute top-[20px] w-[22px] h-[22px] lg:w-auto lg:h-auto left-[205px]"
                   />
                 </span>
-              </h1>
+              </h2>
             </div>
             <p className="text-[13px] lg:text-[20px] lg:mb-5 text-white text-center lg:text-left max-w-[264px] lg:max-w-none relative z-2">
               Participate in getlinked tech Hackathon 2023 stand a chance to win
@@ -106,19 +107,19 @@ const Hero = () => {
 
             <div className="text-white flex gap-4 lg:gap-6 relative z-2 unica-one">
               <div className="flex">
-                <h1 className="font-unicaone text-[48px] lg:text-[64px]">00</h1>
+                <p className="font-unicaone text-[48px] lg:text-[64px]">00</p>
                 <span className="text-[14px] font-primary pb-2 lg:pb-4 inline-block self-end mb-2">
                   H
                 </span>
               </div>
               <div className="flex">
-                <h1 className="font-unicaone text-[48px] lg:text-[64px]">00</h1>
+                <p className="font-unicaone text-[48px] lg:text-[64px]">00</p>
                 <span className="text-[14px] font-primary pb-2 lg:pb-4 inline-block self-end mb-2">
                   M
                 </span>
               </div>
               <div className="flex">
-                <h1 className="font-unicaone text-[48px] lg:text-[64px]">00</h1>
+                <p className="font-unicaone text-[48px] lg:text-[64px]">00</p>
                 <span className="text-[14px] font-primary pb-2 lg:pb-4 inline-block self-end mb-2">
                   S
                 </span>

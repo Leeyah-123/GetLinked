@@ -79,9 +79,9 @@ const Contact = () => {
 const Section1 = () => {
   return (
     <section className="relative my-10 hidden lg:block">
-      <h1 className="text-3xl text-[var(--color-3)] clash-display font-black tracking-wide mb-3">
+      <h2 className="text-3xl text-[var(--color-3)] clash-display font-black tracking-wide mb-3">
         Get in touch
-      </h1>
+      </h2>
 
       <div className="flex flex-col gap-3 text-lg">
         <h2 className="font-medium max-w-[7ch]">Contact Information</h2>

@@ -24,9 +24,9 @@ const Footer = () => {
           </div>
           <div className="flex flex-wrap justify-between gap-x-2 gap-y-10 w-full max-w-[500px]">
             <div className="flex flex-col gap-[15px]">
-              <h1 className="text-[14px] font-semibold text-[var(--color-3)]">
+              <h2 className="text-[14px] font-semibold text-[var(--color-3)]">
                 Useful Links
-              </h1>
+              </h2>
               <Link to="/#overview" className="text-white text-[12px]">
                 Overview
               </Link>
@@ -56,9 +56,9 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex flex-col gap-[22px]">
-              <h1 className="text-[14px] font-semibold text-[var(--color-3)]">
+              <h2 className="text-[14px] font-semibold text-[var(--color-3)]">
                 Contact Us
-              </h1>
+              </h2>
               <ul className="space-y-3">
                 <li className="flex items-start space-x-5">
                   <MdPhoneInTalk size={25} />

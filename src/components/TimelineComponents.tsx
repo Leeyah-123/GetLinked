@@ -19,10 +19,18 @@ export const TimelineLeft = ({
       <div
         className={`pr-[40px] md:pr-[80px] pb-5 ${start ? 'pt-24' : 'pt-10'}`}
       >
-        <h1 className="text-right text-[var(--color-3)] text-[24px] font-bold mb-2">
+        <p
+          id={`${index + 1}-title`}
+          className="text-right text-[var(--color-3)] text-[24px] font-bold mb-2"
+        >
           {title}
-        </h1>
-        <p className="text-[14px] text-white text-right">{content}</p>
+        </p>
+        <p
+          aria-labelledby={`${index + 1}-title`}
+          className="text-[14px] text-white text-right font-medium"
+        >
+          {content}
+        </p>
       </div>
       <div className="flex justify-center relative">
         <div className="h-[58px] w-[58px] rounded-[50%] grid place-items-center text-white timeline-gradient-circle text-[24px] font-bold self-end mb-5 relative z-[1] border-[6px] border-[var(--navy-blue)]">
@@ -31,11 +39,11 @@ export const TimelineLeft = ({
         <div className="absolute w-[4px] h-full bg-[var(--color-3)]"></div>
       </div>
       <div className="pl-[40px] md:pl-[80px] flex items-center">
-        <h1
+        <p
           className={`text-left self-end text-[var(--color-3)] text-[24px] font-bold mb-[30px]`}
         >
           {date}
-        </h1>
+        </p>
       </div>
     </div>
   );
@@ -51,9 +59,9 @@ export const TimelineRight = ({
   return (
     <div className="grid grid-cols-[1fr_70px_1fr]">
       <div className="pr-[40px] md:pr-[80px] flex">
-        <h1 className="flex-1 text-right self-end text-[var(--color-3)] text-[24px] font-bold mb-9">
+        <p className="flex-1 text-right self-end text-[var(--color-3)] text-[24px] font-bold mb-9">
           {date}
-        </h1>
+        </p>
       </div>
       <div className="flex justify-center relative">
         <div className="h-[65px] w-[65px] rounded-[50%] grid place-items-center text-white timeline-gradient-circle text-[24px] font-bold self-end mb-5 relative z-[1] border-[10px] border-[var(--navy-blue)]">
@@ -66,10 +74,18 @@ export const TimelineRight = ({
         ></div>
       </div>
       <div className="pl-[40px] md:pl-[80px] pb-5 pt-10 text-left">
-        <h1 className="text-[var(--color-3)] text-[24px] font-bold mb-2">
+        <p
+          id={`${index + 1}-title`}
+          className="text-[var(--color-3)] text-[24px] font-bold mb-2"
+        >
           {title}
-        </h1>
-        <p className="text-[14px] text-white">{content}</p>
+        </p>
+        <p
+          aria-aria-labelledby={`${index + 1}-title`}
+          className="text-[14px] text-white font-medium"
+        >
+          {content}
+        </p>
       </div>
     </div>
   );
@@ -86,13 +102,21 @@ export const TimelineMobile = ({ title, content, index, date }: Timeline) => {
       </div>
       <div className="pb-[6px] text-left">
         <div className="min-h-[90px]">
-          <h1 className="text-[var(--color-3)] font-bold mb-2">{title}</h1>
-          <p className="text-white font-medium">{content}</p>
+          <p
+            id={`${index + 1}-title`}
+            className="text-[var(--color-3)] font-bold mb-2"
+          >
+            {title}
+          </p>
+          <p
+            aria-labelledby={`${index + 1}-title`}
+            className="text-white font-medium"
+          >
+            {content}
+          </p>
         </div>
         <div className="flex pt-2">
-          <h1 className="flex-1 mb-1 text-[var(--color-3)] font-bold">
-            {date}
-          </h1>
+          <p className="flex-1 mb-1 text-[var(--color-3)] font-bold">{date}</p>
         </div>
       </div>
     </div>

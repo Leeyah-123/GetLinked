@@ -9,27 +9,27 @@ const RulesAndGuide = () => {
   return (
     <SectionContainer position="left">
       <img
-        aria-hidden={true}
+        aria-hidden="true"
         src={flareLeft}
         className="absolute pointer-events-none -left-20 -top-5 lg:-top-80 lg:left-0 mix-blend-hard-light -z-10"
       />
       <img
-        aria-hidden={true}
+        aria-hidden="true"
         src={flareRight}
         className="absolute pointer-events-none bottom-0 right-0 lg:-bottom-1/2 lg:-right-56 mix-blend-hard-light -z-10"
       />
       <img
-        aria-hidden={true}
+        aria-hidden="true"
         src={star1}
         className="w-[3vw] lg:w-auto absolute pointer-events-none right-20 bottom-[20%] lg:right-auto lg:left-[50%] mix-blend-hard-light -z-10"
       />
       <img
-        aria-hidden={true}
+        aria-hidden="true"
         src={star2}
         className="w-[3vw] lg:w-auto absolute pointer-events-none top-[20%] left-10 lg:left-[40%] mix-blend-hard-light -z-10"
       />
 
-      <img src={guide} alt="" aria-hidden={true} loading="lazy" />
+      <img src={guide} alt="" aria-hidden="true" loading="lazy" />
 
       {/*  */}
       <div className="grow max-w-xl lg:px-10 text-center md:text-left">

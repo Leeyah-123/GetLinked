@@ -36,9 +36,9 @@ const Privacy = () => {
                 described in this policy.
               </p>
               <div className="pl-[22px] lg:pl-[72px] pr-[22px] lg:pr-[39px]">
-                <h1 className="text-left relative z-2 text-[var(--color-3)] font-bold">
+                <h2 className="text-left relative z-2 text-[var(--color-3)] font-bold">
                   Licensing Policy{' '}
-                </h1>
+                </h2>
                 <p className="text-left text-white font-semibold leading-[30px]">
                   Here are terms of our Standard License:
                 </p>
@@ -70,7 +70,7 @@ const Privacy = () => {
 
                 <img
                   src={flareLeft}
-                  aria-hidden={true}
+                  aria-hidden="true"
                   className="absolute pointer-events-none -left-10 top-[45%] lg:-left-32 lg:-bottom-1/3 mix-blend-hard-light -z-10"
                 />
               </div>

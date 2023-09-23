@@ -52,7 +52,7 @@ const Faqs = () => {
                   <motion.div
                     id={`panel${index + 1}-content`}
                     role="region"
-                    aria-hidden={false}
+                    aria-hidden="false"
                     aria-labelledby={`panel${index + 1}-heading`}
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: 'auto', opacity: 1 }}

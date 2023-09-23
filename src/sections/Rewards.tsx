@@ -9,12 +9,12 @@ const Rewards = () => {
     <SectionContainer className="text-center lg:text-left">
       <img
         src={flareLeft}
-        aria-hidden={true}
+        aria-hidden="true"
         className="absolute pointer-events-none -left-20 top-0 lg:-top-32 lg:left-0 mix-blend-hard-light -z-10"
       />
       <img
         src={flareRight}
-        aria-hidden={true}
+        aria-hidden="true"
         className="absolute pointer-events-none -bottom-20 right-0 lg:-bottom-[50%] lg:-right-40 mix-blend-hard-light -z-20"
       />
 

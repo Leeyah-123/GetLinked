@@ -14,12 +14,12 @@ const Partners = () => {
     <SectionContainer className="flex-col px-10 md:px-20 lg:px-[300px] py-12">
       <img
         src={flareLeft}
-        aria-hidden={true}
+        aria-hidden="true"
         className="absolute pointer-events-none -left-28 -top-32 mix-blend-hard-light -z-10 lg:hidden"
       />
       <img
         src={flareRight}
-        aria-hidden={true}
+        aria-hidden="true"
         className="absolute pointer-events-none -bottom-[60%] right-0 mix-blend-hard-light -z-20 lg:hidden"
       />
 
@@ -33,12 +33,12 @@ const Partners = () => {
       <div className="relative w-full max-w-6xl mx-auto py-32 rounded-[2px] border-[1px] border-[var(--color-3)]">
         <img
           src={flareLeft}
-          aria-hidden={true}
+          aria-hidden="true"
           className="hidden lg:block absolute pointer-events-none lg:-top-[65%] lg:-left-1/3 mix-blend-hard-light -z-10"
         />
         <img
           src={flareRight}
-          aria-hidden={true}
+          aria-hidden="true"
           className="hidden lg:block absolute pointer-events-none  lg:-bottom-[70%] lg:-right-40 mix-blend-hard-light -z-20"
         />
 
