@@ -17,7 +17,9 @@ export const TimelineLeft = ({
   return (
     <div className="grid grid-cols-[1fr_70px_1fr]">
       <div
-        className={`pr-[40px] md:pr-[80px] pb-5 ${start ? 'pt-24' : 'pt-10'}`}
+        className={`min-h-[10rem] pr-[40px] md:pr-[80px] pb-5 ${
+          start ? 'pt-24' : 'pt-10'
+        }`}
       >
         <p
           id={`${index + 1}-title`}
@@ -36,7 +38,7 @@ export const TimelineLeft = ({
         <div className="h-[58px] w-[58px] rounded-[50%] grid place-items-center text-white timeline-gradient-circle text-[24px] font-bold self-end mb-5 relative z-[1] border-[6px] border-[var(--navy-blue)]">
           {index}
         </div>
-        <div className="absolute w-[4px] h-full bg-[var(--color-3)]"></div>
+        <div className="absolute w-0.5 h-full bg-[var(--color-3)]"></div>
       </div>
       <div className="pl-[40px] md:pl-[80px] flex items-center">
         <p
@@ -63,12 +65,12 @@ export const TimelineRight = ({
           {date}
         </p>
       </div>
-      <div className="flex justify-center relative">
+      <div className="min-h-[10rem] flex justify-center relative">
         <div className="h-[65px] w-[65px] rounded-[50%] grid place-items-center text-white timeline-gradient-circle text-[24px] font-bold self-end mb-5 relative z-[1] border-[10px] border-[var(--navy-blue)]">
           {index}
         </div>
         <div
-          className={`absolute w-[4px] h-full bg-[var(--color-3)] ${
+          className={`absolute w-0.5 h-full bg-[var(--color-3)] ${
             end ? 'bottom-5' : ''
           }`}
         ></div>
@@ -98,7 +100,7 @@ export const TimelineMobile = ({ title, content, index, date }: Timeline) => {
         <div className="h-[40px] w-[40px] rounded-[50%] grid place-items-center text-white timeline-gradient-circle font-bold self-end relative z-[1] border-[7px] border-[var(--navy-blue)]">
           {index}
         </div>
-        <div className={`absolute w-[4px] h-[90%] bg-[var(--color-3)]`}></div>
+        <div className={`absolute w-0.5 h-[90%] bg-[var(--color-3)]`}></div>
       </div>
       <div className="pb-[6px] text-left">
         <div className="min-h-[90px]">
