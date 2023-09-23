@@ -250,6 +250,7 @@ const RegisterForm = ({ openModal }: { openModal: () => void }) => {
         </p>
         <label htmlFor="termsAndConditions">
           <input
+            className="hover:cursor-pointer"
             onChange={(e) => {
               setPrivacyPolicyAccepted(e.target.checked);
             }}
