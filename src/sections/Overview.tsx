@@ -6,7 +6,7 @@ const Overview = () => {
   return (
     <SectionContainer id="overview" position="right">
       <div className="contents">
-        <img src={bigIdea} alt="" className="" />
+        <img src={bigIdea} alt="" className="" loading="lazy" />
 
         <img
           src={star3}
@@ -16,7 +16,7 @@ const Overview = () => {
       </div>
 
       {/*  */}
-      <div className="lg:px-10 space-y-5 text-center md:text-left lg:text-sm">
+      <div className="grow max-w-xl lg:px-10 text-center md:text-left">
         <h5>
           Introduction to getlinked <br />
           <span className="text-magenta">techHackathon 1.0</span>
