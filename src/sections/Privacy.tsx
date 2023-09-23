@@ -7,7 +7,7 @@ import SectionContainer from '../components/SectionContainer';
 const Privacy = () => {
   return (
     <SectionContainer>
-      <div className="text-center py-20 lg:text-left lg:px-10">
+      <div id="terms" className="text-center py-20 lg:text-left lg:px-10">
         <div className="grid lg:grid-cols-2 gap-[50px]">
           <section className="max-w-2xl">
             <div className="text-white relative mb-14">

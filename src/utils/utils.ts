@@ -102,18 +102,22 @@ export const timelines = [
 
 export const socialLinks = [
   {
+    id: 1,
     link: '',
     Icon: FaInstagram,
   },
   {
+    id: 2,
     link: '',
     Icon: RiTwitterXFill,
   },
   {
+    id: 3,
     link: '',
     Icon: FaFacebookF,
   },
   {
+    id: 4,
     link: '',
     Icon: FaLinkedinIn,
   },
