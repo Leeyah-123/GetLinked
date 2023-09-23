@@ -12,7 +12,7 @@ const Privacy = () => {
         <div className="grid lg:grid-cols-2 gap-[50px]">
           <section className="max-w-2xl">
             <div className="text-white relative mb-14">
-              <h5 className="text-[6vw] font-medium clash-display lg:font-semibold lg:mb-5 lg:text-4xl">
+              <h5 className="font-medium clash-display lg:font-semibold lg:mb-5">
                 Privacy Policy and <br />
                 <span className="text-[var(--color-3)]">Terms</span>
               </h5>
@@ -39,7 +39,7 @@ const Privacy = () => {
                 <h1 className="text-left relative z-2 text-[var(--color-3)] font-bold">
                   Licensing Policy{' '}
                 </h1>
-                <p className="text-left text-white text-[3.5vw] font-semibold leading-[30px]">
+                <p className="text-left text-white font-semibold leading-[30px]">
                   Here are terms of our Standard License:
                 </p>
                 <ul className="flex flex-col gap-4 pt-5 pb-6 text-left">
