@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import faq_image from '../assets/images/home/cwok_casual_21 1.svg';
-import { faqs } from '../utils/utils';
-import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useState } from 'react';
+import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
+import faq_image from '../assets/images/home/cwok_casual_21 1.svg';
 import SectionContainer from '../components/SectionContainer';
+import { faqs } from '../utils/utils';
 
 const Faqs = () => {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
