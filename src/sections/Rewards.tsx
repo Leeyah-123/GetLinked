@@ -4,15 +4,15 @@ import SectionContainer from '../components/SectionContainer';
 
 const Rewards = () => {
   return (
-    <SectionContainer className="px-10 md:px-20 lg:px-28 py-12">
+    <SectionContainer className="text-[3.4vw] px-10 md:px-20 lg:px-28 py-12 text-center lg:text-left lg:text-sm">
       <div className="flex flex-col lg:flex-row-reverse md:items-center md:text-left gap-16">
         <div className="lg:flex-1">
           <div>
-            <h5 className="text-4xl font-semibold">
+            <h5 className="text-xl font-bold clash-display lg:text-3xl">
               Prizes and <br />
               <span className="text-magenta">Rewards</span>
             </h5>
-            <p className="my-5 max-w-sm">
+            <p className="my-3 lg:my-5 font-medium">
               Highlight of the prizes or rewards for winners and for
               participants.
             </p>

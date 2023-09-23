@@ -1,19 +1,22 @@
-import SectionContainer from '../components/SectionContainer'
+import SectionContainer from '../components/SectionContainer';
 import {
   TimelineLeft,
   TimelineMobile,
   TimelineRight,
-} from '../components/TimelineComponents'
-import { timelines } from '../utils/utils'
+} from '../components/TimelineComponents';
+import { timelines } from '../utils/utils';
 
 const Timeline = () => {
   return (
     <SectionContainer id="timeline" className="pb-10">
-      <div className="">
-        <div className="w-full max-w-[346px] mx-auto text-center text-white mb-20">
-          <h1 className="text-[32px] font-bold mb-2">Timeline</h1>
-          <p className="text-[14px]">
-            Here is the breakdown of the time we anticipate using for the upcoming event.
+      <div>
+        <div className="w-full max-w-[346px] mb-10 mx-auto text-center text-white lg:mb-20">
+          <h1 className="mb-2 text-xl font-bold clash-display lg:text-3xl">
+            Timeline
+          </h1>
+          <p className="text-[3.4vw] font-medium lg:text-sm">
+            Here is the breakdown of the time we anticipate using for the
+            upcoming event.
           </p>
         </div>
         <section className="hidden sm:block">
@@ -54,7 +57,7 @@ const Timeline = () => {
         </section>
       </div>
     </SectionContainer>
-  )
-}
+  );
+};
 
-export default Timeline
+export default Timeline;
