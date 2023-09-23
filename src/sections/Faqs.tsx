@@ -1,9 +1,15 @@
 import { useState } from 'react'
-import faq_image from '../assets/images/home/cwok_casual_21 1.png'
 import { faqs } from '../utils/utils'
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
 import { AnimatePresence, motion } from 'framer-motion'
 import SectionContainer from '../components/SectionContainer'
+
+import faq_image from '../assets/images/home/cwok_casual_21 1.png'
+// import star1 from '../assets/images/contact/star1.svg';
+// import star2 from '../assets/images/contact/star2.svg';
+// import star3 from '../assets/images/contact/star3.svg';
+// import star4 from '../assets/images/contact/star4.svg';
+// import star5 from '../assets/images/contact/star5.svg';
 
 const Faqs = () => {
   const [activeFaq, setActiveFaq] = useState<number | null>(null)
