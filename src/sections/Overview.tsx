@@ -7,7 +7,7 @@ const Overview = () => {
       <img src={bigIdea} alt="" className="" />
 
       {/*  */}
-      <div className="space-y-5 text-center md:text-left lg:text-sm">
+      <div className="px-10 space-y-5 text-center md:text-left lg:text-sm">
         <h5>
           Introduction to getlinked <br />
           <span className="text-magenta">techHackathon 1.0</span>

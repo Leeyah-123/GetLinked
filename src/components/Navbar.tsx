@@ -57,7 +57,7 @@ const Navbar = () => {
         }`}
       >
         <Link to="/">
-          <Logo className="aspect-[170/32] w-[24vw] lg:w-auto" />
+          <Logo className="aspect-[170/32] w-[24vw] lg:w-auto lg:pl-10" />
         </Link>
 
         <button
