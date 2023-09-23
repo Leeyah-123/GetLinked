@@ -16,7 +16,7 @@ const SectionContainer = ({ children, className, position, id }: SectionInterfac
 
   return (
     <motion.section
-      className={`flex items-center justify-around pb-10 space-y-10 md:space-y-0 min-h-[700px] relative ${className} ${
+      className={`!text-sm relative flex items-center justify-around space-y-10 md:space-y-0 ${className} ${
         position ? display() : ''
       }`}
       initial={{ opacity: 0 }}

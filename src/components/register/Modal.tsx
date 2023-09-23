@@ -80,7 +80,7 @@ const Modal = ({
           isModalOpen ? 'block' : 'hidden'
         }`}
         onClick={closeModal}
-        aria-hidden={true}
+        aria-hidden="true"
       ></div>
 
       {/* Modal content */}

@@ -79,9 +79,9 @@ const Contact = () => {
 const Section1 = () => {
   return (
     <section className="relative my-10 hidden lg:block">
-      <h1 className="text-3xl text-[var(--color-3)] clash-display font-black tracking-wide mb-3">
+      <h2 className="text-3xl text-[var(--color-3)] clash-display font-black tracking-wide mb-3">
         Get in touch
-      </h1>
+      </h2>
 
       <div className="flex flex-col gap-3 text-lg">
         <h2 className="font-medium max-w-[7ch]">Contact Information</h2>
@@ -163,7 +163,7 @@ const Section2 = () => {
     }
 
     Loading.hourglass();
-    const { success, error, data } = await contact({
+    const { error } = await contact({
       email,
       first_name: firstName,
       phone_number: phoneNum,
@@ -171,24 +171,28 @@ const Section2 = () => {
     });
     Loading.remove();
 
-    if (!success) {
+    if (error) {
       type ResponseData = { string: Array<string> };
 
-      const responseData: ResponseData = error?.response?.data as ResponseData;
+      const responseData: ResponseData = error.response?.data as ResponseData;
       let errorString = '';
 
       for (const key in responseData) {
         const errors: Array<string> = responseData[key as keyof ResponseData];
-        return (errorString = errors[0]);
+        errorString = errors[0];
+        break;
       }
 
-      Report.failure('An error occurred', errorString, 'Okay');
+      Report.failure(
+        'An error occurred',
+        errorString || error.message || 'An error occurred',
+        'Okay'
+      );
       return;
     }
 
     Notify.success('Successfully sent message');
     resetFields();
-    console.log(data);
   };
 
   return (
@@ -212,6 +216,7 @@ const Section2 = () => {
           minLength={3}
           placeholder="First Name"
           className="rounded-sm lg:rounded-md bg-transparent text-white placeholder:text-white placeholder:font-medium outline outline-1 outline-white px-5 p-2"
+          required
         />
         <input
           type="number"
@@ -230,6 +235,7 @@ const Section2 = () => {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Mail"
           className="rounded-sm lg:rounded-md bg-transparent text-white placeholder:text-white placeholder:font-medium outline outline-1 outline-white px-5 p-2"
+          required
         />
         <textarea
           name="message"
@@ -240,6 +246,7 @@ const Section2 = () => {
           rows={3}
           placeholder="Message"
           className="rounded-sm lg:rounded-md bg-transparent text-white placeholder:text-white placeholder:font-medium outline outline-1 outline-white px-5 py-2"
+          required
         />
         <button type="submit" className="btn self-center">
           Submit

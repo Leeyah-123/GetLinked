@@ -30,10 +30,10 @@ const RegisterForm = ({ openModal }: { openModal: () => void }) => {
   };
 
   const fetchCategories = async () => {
-    const { success, data, error } = await getCategories();
+    const { data, error } = await getCategories();
 
-    if (!success) {
-      Notify.failure(`Unable to fetch categories: ${error?.message}`);
+    if (error) {
+      Notify.failure(`Unable to fetch categories: ${error.message}`);
       return;
     }
 
@@ -56,7 +56,7 @@ const RegisterForm = ({ openModal }: { openModal: () => void }) => {
     }
 
     Loading.hourglass();
-    const { success, error } = await register({
+    const { error } = await register({
       category,
       email,
       group_size: groupSize,
@@ -67,18 +67,23 @@ const RegisterForm = ({ openModal }: { openModal: () => void }) => {
     });
     Loading.remove();
 
-    if (!success) {
+    if (error) {
       type ResponseData = { string: Array<string> };
 
-      const responseData: ResponseData = error?.response?.data as ResponseData;
+      const responseData: ResponseData = error.response?.data as ResponseData;
       let errorString = '';
 
       for (const key in responseData) {
         const errors: Array<string> = responseData[key as keyof ResponseData];
-        return (errorString = errors[0]);
+        errorString = errors[0];
+        break;
       }
 
-      Report.failure('Unable to register', errorString, 'Okay');
+      Report.failure(
+        'Unable to register',
+        errorString || error.message || 'An error occurred',
+        'Okay'
+      );
       return;
     }
 
@@ -110,6 +115,7 @@ const RegisterForm = ({ openModal }: { openModal: () => void }) => {
             onChange={(e) => setTeamName(e.target.value)}
             placeholder="Enter the name of your group"
             className="w-full mt-2 rounded-sm text-sm bg-transparent text-white placeholder:text-white/25 placeholder:font-medium placeholder:text-sm outline outline-1 outline-white px-5 py-2"
+            required
           />
         </div>
         <div>
@@ -125,6 +131,7 @@ const RegisterForm = ({ openModal }: { openModal: () => void }) => {
             minLength={11}
             placeholder="Enter your phone number"
             className="w-full mt-2 rounded-sm text-sm bg-transparent text-white placeholder:text-white/25 placeholder:font-medium placeholder:text-sm outline outline-1 outline-white px-5 py-2"
+            required
           />
         </div>
         <div>
@@ -139,6 +146,7 @@ const RegisterForm = ({ openModal }: { openModal: () => void }) => {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email address"
             className="w-full mt-2 rounded-sm text-sm bg-transparent text-white placeholder:text-white/25 placeholder:font-medium placeholder:text-sm outline outline-1 outline-white px-5 py-2"
+            required
           />
         </div>
         <div>
@@ -154,6 +162,7 @@ const RegisterForm = ({ openModal }: { openModal: () => void }) => {
             onChange={(e) => setProjectTopic(e.target.value)}
             placeholder="What is your group project topic"
             className="w-full mt-2 rounded-sm text-sm bg-transparent text-white placeholder:text-white/25 placeholder:font-medium placeholder:text-sm outline outline-1 outline-white px-5 py-2"
+            required
           />
         </div>
       </div>
@@ -172,6 +181,7 @@ const RegisterForm = ({ openModal }: { openModal: () => void }) => {
             className={`w-full mt-2 rounded-sm text-sm bg-transparent placeholder:text-white/25 placeholder:font-medium placeholder:text-sm outline outline-1 outline-white px-5 py-2 focus:outline-[3px] ${
               category ? 'text-white' : 'text-white/25'
             }`}
+            required
           >
             <option
               value={0}
@@ -190,7 +200,7 @@ const RegisterForm = ({ openModal }: { openModal: () => void }) => {
             ))}
           </select>
 
-          {!categories && (
+          {!categories ? (
             <button
               className="absolute right-0 top-1"
               title="Fetch categories"
@@ -201,7 +211,7 @@ const RegisterForm = ({ openModal }: { openModal: () => void }) => {
             >
               <BiRefresh className="h-6 w-6" />
             </button>
-          )}
+          ) : null}
         </div>
 
         <div>
@@ -217,6 +227,7 @@ const RegisterForm = ({ openModal }: { openModal: () => void }) => {
             className={`w-full mt-2 rounded-sm text-sm bg-transparent outline outline-1 outline-white px-5 py-2 focus:outline-[3px] ${
               groupSize ? 'text-white' : 'text-white/25'
             }`}
+            required
           >
             <option
               value={0}
@@ -239,6 +250,7 @@ const RegisterForm = ({ openModal }: { openModal: () => void }) => {
         </p>
         <label htmlFor="termsAndConditions">
           <input
+            className="hover:cursor-pointer"
             onChange={(e) => {
               setPrivacyPolicyAccepted(e.target.checked);
             }}

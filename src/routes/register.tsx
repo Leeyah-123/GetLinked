@@ -38,9 +38,9 @@ const Register = () => {
     <>
       <BackButton className="pl-[10vw] md:pl-[20vw] py-[5vh]" />
 
-      <h1 className="pl-[10vw] md:pl-[20vw] self-start text-xl text-[var(--color-3)] clash-display font-medium tracking-wide lg:hidden">
+      <h2 className="pl-[10vw] md:pl-[20vw] self-start text-xl text-[var(--color-3)] clash-display font-medium tracking-wide lg:hidden">
         Register
-      </h1>
+      </h2>
 
       <div
         id="contact"
@@ -53,9 +53,9 @@ const Register = () => {
         />
 
         <div className="relative mb-2 h-fit rounded-xl px-[5vw] py-[7vh] md:px-[5vw] md:py-[3vh] lg:-ml-7 lg:shadow-[#0f0f0f] lg:shadow-md lg:bg-white/[0.03] xl:py-[5vh]">
-          <h1 className="hidden lg:block text-2xl text-[var(--color-3)] clash-display font-medium tracking-wide mb-4 lg:mb-8">
+          <h2 className="hidden lg:block text-2xl text-[var(--color-3)] clash-display font-medium tracking-wide mb-4 lg:mb-8">
             Register
-          </h1>
+          </h2>
 
           <div className="mb-3 flex">
             <p className="w-[20ch] sm:w-auto text-sm font-medium">
