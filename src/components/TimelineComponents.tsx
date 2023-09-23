@@ -56,7 +56,7 @@ export const TimelineRight = ({
         </h1>
       </div>
       <div className="flex justify-center relative">
-        <div className="h-[65px] w-[65px] rounded-[50%] grid place-items-center text-white timeline-gradient-circle text-[24px] font-bold self-end mb-5 relative z-[1] border-[10px] border-[#150E28]">
+        <div className="h-[65px] w-[65px] rounded-[50%] grid place-items-center text-white timeline-gradient-circle text-[24px] font-bold self-end mb-5 relative z-[1] border-[10px] border-[var(--navy-blue)]">
           {index}
         </div>
         <div
@@ -77,22 +77,20 @@ export const TimelineRight = ({
 
 export const TimelineMobile = ({ title, content, index, date }: Timeline) => {
   return (
-    <div className="grid grid-cols-[36px_1fr]">
+    <div className="grid grid-cols-[36px_1fr] mb-5 text-[12px]">
       <div className="flex justify-center relative">
-        <div className="h-[40px] w-[40px] rounded-full grid place-items-center text-white timeline-gradient-circle text-sm font-bold self-end relative z-[1] border-[6px] border-[#150E28]">
+        <div className="h-[40px] w-[40px] rounded-[50%] grid place-items-center text-white timeline-gradient-circle font-bold self-end relative z-[1] border-[7px] border-[var(--navy-blue)]">
           {index}
         </div>
-        <div className={`absolute w-[4px] h-full bg-[var(--color-3)]`}></div>
+        <div className={`absolute w-[4px] h-[90%] bg-[var(--color-3)]`}></div>
       </div>
       <div className="pb-[6px] text-left">
         <div className="min-h-[90px]">
-          <h1 className="text-[var(--color-3)] font-bold mb-2 text-[12px]">
-            {title}
-          </h1>
-          <p className="text-base text-white">{content}</p>
+          <h1 className="text-[var(--color-3)] font-bold mb-2">{title}</h1>
+          <p className="text-white font-medium">{content}</p>
         </div>
         <div className="flex pt-2">
-          <h1 className="flex-1 self-end text-[var(--color-3)] text-base font-bold">
+          <h1 className="flex-1 mb-1 text-[var(--color-3)] font-bold">
             {date}
           </h1>
         </div>
