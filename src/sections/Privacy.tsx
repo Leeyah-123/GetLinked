@@ -70,7 +70,7 @@ const Privacy = () => {
 
                 <img
                   src={flareLeft}
-                  alt="purple lens flare"
+                  aria-hidden={true}
                   className="absolute pointer-events-none -left-10 top-[45%] lg:-left-32 lg:-bottom-1/3 mix-blend-hard-light -z-10"
                 />
               </div>
