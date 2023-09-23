@@ -1,22 +1,29 @@
-import { ReactNode } from 'react'
-import { motion } from 'framer-motion'
+import { ReactNode } from 'react';
+import { motion } from 'framer-motion';
 // import { sectionVariants } from '../utils/framer-motion'
 
 interface SectionInterface {
-  children: ReactNode | ReactNode[]
-  className?: string
-  position?: 'right' | 'left'
-  id?: string
+  children: ReactNode | ReactNode[];
+  className?: string;
+  position?: 'right' | 'left';
+  id?: string;
 }
 
-const SectionContainer = ({ children, className, position, id }: SectionInterface) => {
+const SectionContainer = ({
+  children,
+  className,
+  position,
+  id,
+}: SectionInterface) => {
   const display = () => {
-    return position === 'left' ? 'flex-col lg:flex-row-reverse' : 'flex-col lg:flex-row'
-  }
+    return position === 'left'
+      ? 'flex-col lg:flex-row-reverse'
+      : 'flex-col lg:flex-row';
+  };
 
   return (
     <motion.section
-      className={`flex items-center justify-around pb-10 space-y-10 md:space-y-0 min-h-[700px] ${className} ${
+      className={`flex items-center justify-around pb-10 space-y-10 md:space-y-0 min-h-[700px] !px-10 ${className} ${
         position ? display() : ''
       }`}
       initial={{ opacity: 0 }}
@@ -27,7 +34,7 @@ const SectionContainer = ({ children, className, position, id }: SectionInterfac
     >
       {children}
     </motion.section>
-  )
-}
+  );
+};
 
-export default SectionContainer
+export default SectionContainer;
