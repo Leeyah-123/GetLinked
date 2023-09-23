@@ -4,6 +4,8 @@ import curve from '../assets/images/home/curve.svg';
 import fire from '../assets/images/home/fire.svg';
 import guy from '../assets/images/home/guy-wearing-vr.svg';
 import spark from '../assets/images/home/spark.svg';
+import star1 from '../assets/images/home/star1.svg';
+import star2 from '../assets/images/home/star2.svg';
 import flareRight from '../assets/images/home/flare-right.svg';
 import flareLeft from '../assets/images/home/flare-left.svg';
 
@@ -13,14 +15,36 @@ const Hero = () => {
       <div className="text-3.4vw lg:text-sm flex justify-center lg:justify-end relative">
         {/* Flares */}
         <img
+          aria-hidden={true}
           src={flareLeft}
-          alt="purple lens flare"
+          alt=""
           className="absolute pointer-events-none -left-10 -top-32 lg:-top-80 lg:-left-24 mix-blend-hard-light -z-10"
         />
         <img
+          aria-hidden={true}
           src={flareRight}
-          alt="purple lens flare"
+          alt=""
           className="hidden lg:block absolute pointer-events-none -top-[6.5rem] -right-20 mix-blend-hard-light -z-10"
+        />
+
+        {/* Stars */}
+        <img
+          aria-hidden={true}
+          src={star1}
+          alt=""
+          className="w-[3vw] lg:w-auto absolute pointer-events-none top-7 lg:top-0 left-28 mix-blend-hard-light -z-10"
+        />
+        <img
+          aria-hidden={true}
+          src={star2}
+          alt=""
+          className="w-[3vw] lg:w-auto absolute pointer-events-none top-[15rem] right-[20%] lg:top-[30rem] lg:right-1/2 mix-blend-hard-light -z-10"
+        />
+        <img
+          aria-hidden={true}
+          src={star2}
+          alt=""
+          className="w-[3vw] lg:w-auto absolute pointer-events-none top-[5rem] right-[10%] mix-blend-hard-light -z-10"
         />
 
         <h1 className="text-[3.5vw] lg:text-3xl font-bold italic text-white relative z-2 text-center lg:text-right">

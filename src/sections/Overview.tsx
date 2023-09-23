@@ -1,10 +1,19 @@
 import bigIdea from '../assets/images/home/The big idea.png';
 import SectionContainer from '../components/SectionContainer';
+import star3 from '../assets/images/home/star3.svg';
 
 const Overview = () => {
   return (
     <SectionContainer id="overview" position="right">
-      <img src={bigIdea} alt="" className="" />
+      <div className="contents">
+        <img src={bigIdea} alt="" className="" />
+
+        <img
+          src={star3}
+          alt=""
+          className="w-[3vw] lg:w-auto absolute top-10 left-10"
+        />
+      </div>
 
       {/*  */}
       <div className="px-10 space-y-5 text-center md:text-left lg:text-sm">
@@ -21,6 +30,12 @@ const Overview = () => {
           problems, pushing the boundaries of technology, and creating solutions
           that can change the world, that&apos;s what we&apos;re all about!
         </h6>
+
+        <img
+          src={star3}
+          alt=""
+          className="w-[3vw] lg:w-auto absolute top-[60%] right-10 lg:top-[30%]"
+        />
       </div>
     </SectionContainer>
   );
