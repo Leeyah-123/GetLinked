@@ -19,15 +19,15 @@ const Partners = () => {
           companies as its partners and sponsors
         </p>
       </div>
-      <div className="w-full max-w-[1255px] mx-auto py-32 rounded-[2px] border-[1px] border-[var(--color-3)]">
-        <div className="w-full max-w-[898px] mx-auto grid grid-cols-3">
-          <div className="p-5 grid place-items-center border-b-[3px] border-[var(--color-3)] relative before:content-[''] before:w-[50px] before:h-[50px] before:absolute before:bottom-[-25px] before:right-[-25px] before:bg-[var(--navy-blue)]">
+      <div className="w-full max-w-6xl mx-auto py-32 rounded-[2px] border-[1px] border-[var(--color-3)]">
+        <div className="w-full max-w-4xl mx-auto grid grid-cols-3">
+          <div className="p-5 grid place-items-center border-b-[3px] border-[var(--color-3)] relative before:content-[''] before:w-12 before:h-12 before:absolute before:bottom-[-25px] before:right-[-25px] before:bg-[var(--navy-blue)]">
             <img src={libertyImg} alt="Liberty" />
           </div>
           <div className="p-5 grid place-items-center border-b-[3px] border-[var(--color-3)] border-l-[3px] border-r-[3px]">
             <img src={libertyPayImg} alt="Liberty Pay" />
           </div>
-          <div className="p-5 grid place-items-center border-b-[3px] border-[var(--color-3)] relative before:content-[''] before:w-[50px] before:h-[50px] before:absolute before:bottom-[-25px] before:left-[-25px] before:bg-[var(--navy-blue)]">
+          <div className="p-5 grid place-items-center border-b-[3px] border-[var(--color-3)] relative before:content-[''] before:w-12 before:h-12 before:absolute before:bottom-[-25px] before:left-[-25px] before:bg-[var(--navy-blue)]">
             <img src={winwiseImg} alt="Winwise" />
           </div>
           <div className="p-5 grid place-items-center">

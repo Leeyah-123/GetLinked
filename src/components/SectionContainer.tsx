@@ -23,7 +23,7 @@ const SectionContainer = ({
 
   return (
     <motion.section
-      className={`flex items-center justify-around pb-10 space-y-10 md:space-y-0 min-h-[700px] !px-10 ${className} ${
+      className={`flex items-center justify-around pb-10 space-y-10 md:space-y-0 min-h-[700px] !px-20 ${className} ${
         position ? display() : ''
       }`}
       initial={{ opacity: 0 }}

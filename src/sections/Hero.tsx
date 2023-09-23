@@ -8,7 +8,7 @@ import spark from '../assets/images/home/spark.svg';
 const Hero = () => {
   return (
     <section id="home" className="border-t border-slate-800">
-      <div className="text-3.4vw lg:text-sm !px-4 flex justify-center lg:justify-end relative">
+      <div className="text-3.4vw lg:text-sm flex justify-center lg:justify-end relative">
         {/* <img
           src="/images/purple-lens-flare-left.svg"
           alt="purple lens flare"
@@ -30,9 +30,9 @@ const Hero = () => {
           </span>
         </h1>
       </div>
-      <div className="border-b-[1px] border-[#ffffff2e]">
+      <div>
         <div className="grid lg:grid-cols-2 pt-8 lg:pt-24 !px-0 lg:!pl-12">
-          <header className="grid place-items-center lg:place-items-start px-[30px] lg:px-0 lg:flex flex-col gap-5 pb-8">
+          <header className="grid place-items-center gap-3 lg:place-items-start lg:flex flex-col lg:gap-5 pb-8">
             {/* <img
               src="/images/purple-lens-flare-left.svg"
               alt="purple lens flare"

@@ -9,7 +9,7 @@ import { timelines } from '../utils/utils';
 const Timeline = () => {
   return (
     <SectionContainer id="timeline" className="pb-10">
-      <div>
+      <div className="lg:px-10">
         <div className="w-full max-w-[346px] mb-10 mx-auto text-center text-white lg:mb-20">
           <h1 className="mb-2 text-xl font-bold clash-display lg:text-3xl">
             Timeline

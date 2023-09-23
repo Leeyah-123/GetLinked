@@ -19,7 +19,7 @@ const Faqs = () => {
   return (
     <SectionContainer id="faqs" position="right">
       {/*  */}
-      <div className="text-[3.4vw] grow space-y-5 max-w-xl text-center md:text-left lg:text-sm">
+      <div className="text-[3.4vw] grow space-y-5 max-w-xl text-center md:text-left lg:text-sm lg:px-10">
         <h5 className="text-xl font-bold clash-display lg:text-3xl">
           Frequently Asked
           <br />

@@ -9,7 +9,7 @@ const Criteria = () => {
       <img src={criteriaImg} alt="" className="" />
 
       {/*  */}
-      <div className="text-[3.4vw] grow space-y-5 max-w-xl text-center md:text-left lg:text-sm">
+      <div className="text-[3.4vw] grow space-y-5 max-w-xl text-center md:text-left lg:px-10 lg:text-sm">
         <h5 className="text-xl font-bold clash-display lg:text-3xl">
           Judging Criteria <br />
           <span className="text-[var(--color-3)]">Key Attributes</span>
