@@ -33,6 +33,9 @@
   a:not(.btn, .back-btn, .icon):focus {
     @apply transition-colors duration-300 bg-gradient-to-r from-[var(--color-1)] to-[var(--color-2)] text-transparent bg-clip-text;
   }
+  h5 {
+    @apply text-xl font-bold clash-display lg:text-3xl;
+  }
 }
 
 @layer components {

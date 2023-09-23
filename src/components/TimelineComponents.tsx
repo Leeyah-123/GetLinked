@@ -61,7 +61,7 @@ export const TimelineRight = ({
         </div>
         <div
           className={`absolute w-[4px] h-full bg-[var(--color-3)] ${
-            end && 'bottom-5'
+            end ? 'bottom-5' : ''
           }`}
         ></div>
       </div>

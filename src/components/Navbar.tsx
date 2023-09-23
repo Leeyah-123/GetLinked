@@ -53,7 +53,7 @@ const Navbar = () => {
     <>
       <nav
         className={`px-10 py-7 z-30 lg:items-center lg:flex lg:py-12 lg:px-20 ${
-          location.pathname !== '/' && 'hidden'
+          location.pathname !== '/' ? 'hidden' : ''
         }`}
       >
         <Link to="/">
@@ -66,7 +66,7 @@ const Navbar = () => {
           ref={menuRef}
           className={`absolute ${
             isNavOpen ? 'top-6 right-9' : 'top-7 right-10'
-          } ${location.pathname !== '/' && 'hidden'} z-[100] lg:hidden`}
+          } ${location.pathname !== '/' ? 'hidden' : ''} z-[100] lg:hidden`}
           onClick={toggleNav}
         >
           {/* This is for screen readers only and won't be visible on screen */}
@@ -218,7 +218,7 @@ const Navbar = () => {
               to="/register"
               className={({ isActive }) =>
                 `btn relative ${
-                  isActive && 'active bg-none bg-[var(--navy-blue)]'
+                  isActive ? 'active bg-none bg-[var(--navy-blue)]' : ''
                 }`
               }
             >

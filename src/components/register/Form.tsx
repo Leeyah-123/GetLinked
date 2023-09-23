@@ -200,7 +200,7 @@ const RegisterForm = ({ openModal }: { openModal: () => void }) => {
             ))}
           </select>
 
-          {!categories && (
+          {!categories ? (
             <button
               className="absolute right-0 top-1"
               title="Fetch categories"
@@ -211,7 +211,7 @@ const RegisterForm = ({ openModal }: { openModal: () => void }) => {
             >
               <BiRefresh className="h-6 w-6" />
             </button>
-          )}
+          ) : null}
         </div>
 
         <div>

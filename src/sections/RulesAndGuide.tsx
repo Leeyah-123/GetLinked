@@ -1,14 +1,27 @@
 import guide from '../assets/images/home/7450159 1.png';
 import SectionContainer from '../components/SectionContainer';
+import flareRight from '../assets/images/home/flare-right.svg';
+import flareLeft from '../assets/images/home/flare-left.svg';
 
 const RulesAndGuide = () => {
   return (
     <SectionContainer position="left">
+      <img
+        src={flareLeft}
+        alt="purple lens flare"
+        className="absolute pointer-events-none -left-20 top-0 lg:-top-80 lg:left-0 mix-blend-hard-light"
+      />
+      <img
+        src={flareRight}
+        alt="purple lens flare"
+        className="absolute pointer-events-none bottom-0 right-0 lg:-bottom-1/2 lg:-right-56 mix-blend-hard-light"
+      />
+
       <img src={guide} alt="" className="" />
 
       {/*  */}
-      <div className="text-[3.4vw] grow space-y-5 max-w-xl lg:px-10 text-center md:text-left lg:text-sm">
-        <h5 className="text-xl font-bold clash-display lg:text-3xl">
+      <div className="grow max-w-xl lg:px-10 text-center md:text-left">
+        <h5>
           Rules and <br />
           <span className="text-[var(--color-3)]">Guidelines</span>
         </h5>

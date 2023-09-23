@@ -4,7 +4,7 @@ import SectionContainer from '../components/SectionContainer';
 
 const Rewards = () => {
   return (
-    <SectionContainer className="text-[3.4vw] px-10 md:px-20 lg:px-28 py-12 text-center lg:text-left lg:text-sm">
+    <SectionContainer className="text-[3.4vw] py-12 text-center lg:text-left lg:text-sm">
       <div className="flex flex-col lg:flex-row-reverse md:items-center md:text-left gap-16">
         <div className="lg:flex-1">
           <div>
