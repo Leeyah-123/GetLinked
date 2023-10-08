@@ -59,7 +59,6 @@ const Hero = () => {
           </span>
         </h2>
       </div>
-      <div>
         <div className="grid lg:grid-cols-2 pt-8 lg:pt-16 !px-0 lg:!pl-12">
           <header className="grid place-items-center gap-3 lg:place-items-start lg:flex flex-col lg:gap-5 pb-8">
             <div className="grid place-items-center text-center lg:text-left lg:block clash-display text-white text-[32px] lg:text-[80px] font-bold lg:leading-[98px] relative z-2 tracking-tight">
@@ -131,7 +130,6 @@ const Hero = () => {
             <img src={guy} alt="A man wearing VR googles" className="" />
           </figure>
         </div>
-      </div>
     </section>
   );
 };
