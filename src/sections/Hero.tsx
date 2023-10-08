@@ -61,7 +61,7 @@ const Hero = () => {
       </div>
         <div className="grid lg:grid-cols-2 pt-8 lg:pt-16 !px-0 lg:!pl-12">
           <header className="grid place-items-center gap-3 lg:place-items-start lg:flex flex-col lg:gap-5 pb-8">
-            <div className="mt-40 grid place-items-center text-center lg:text-left lg:block clash-display text-white text-[32px] lg:text-[80px] font-semibold lg:leading-[87px] relative z-2 tracking-tight">
+            <div className="grid place-items-center text-center lg:text-left lg:block clash-display text-white text-[32px] md:text-[40px] lg:text-[50px] font-semibold relative z-2 tracking-tight">
               <div className="relative">
                 <h1>
                   getlinked{``}
