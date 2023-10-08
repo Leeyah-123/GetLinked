@@ -1,25 +1,35 @@
-import { AnimatePresence, motion } from 'framer-motion';
-import { useState } from 'react';
-import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
-import faq_image from '../assets/images/home/cwok_casual_21 1.svg';
-import SectionContainer from '../components/SectionContainer';
-import { faqs } from '../utils/utils';
+import { AnimatePresence, motion } from 'framer-motion'
+import { useState } from 'react'
+import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
+import faq_image from '../assets/images/home/cwok_casual_21 1.svg'
+import SectionContainer from '../components/SectionContainer'
+import { faqs } from '../utils/utils'
+
+import star1 from '../assets/images/home/star1.svg'
+import star2 from '../assets/images/home/star2.svg'
+import star3 from '../assets/images/home/star3.svg'
+import question from '../assets/images/home/_.png'
 
 const Faqs = () => {
-  const [activeFaq, setActiveFaq] = useState<number | null>(null);
+  const [activeFaq, setActiveFaq] = useState<number | null>(null)
 
   const handleFaq = (index: number) => {
     if (index === activeFaq) {
-      setActiveFaq(null);
+      setActiveFaq(null)
     } else {
-      setActiveFaq(index);
+      setActiveFaq(index)
     }
-  };
+  }
 
   return (
     <SectionContainer id="faqs" position="right">
       {/*  */}
-      <div className="space-y-5 max-w-xl text-center md:text-left">
+      <div className="space-y-5 max-w-xl text-center md:text-left relative">
+        <img
+          src={star3}
+          aria-hidden="true"
+          className="w-[3vw] lg:w-auto absolute pointer-events-none top-0 -left-20 mix-blend-hard-light -z-10"
+        />
         <h5>
           Frequently Asked
           <br />
@@ -58,7 +68,7 @@ const Faqs = () => {
                     animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     className="mt-3"
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.3 }}
                   >
                     {answer}
                   </motion.div>
@@ -69,9 +79,37 @@ const Faqs = () => {
         </div>
       </div>
 
-      <img src={faq_image} alt="" className="h-full w-[700px]" loading="lazy" />
-    </SectionContainer>
-  );
-};
+      <div className="relative pt-10">
+        <div className="absolute -top-5 left-1/4 flex space-x-10 items-end">
+          <img src={question} className="h-16" alt="" />
+          <img src={question} className="w-16" alt="" />
+          <img src={question} className="h-16" alt="" />
+        </div>
 
-export default Faqs;
+        <img
+          src={star3}
+          aria-hidden="true"
+          className="w-[3vw] lg:w-auto absolute pointer-events-none top-28 left-20 mix-blend-hard-light -z-10"
+        />
+        <img
+          src={star3}
+          aria-hidden="true"
+          className="w-[3vw] lg:w-auto absolute pointer-events-none top-2 left-1/2 mix-blend-hard-light -z-10"
+        />
+        <img
+          src={star2}
+          aria-hidden="true"
+          className="w-[3vw] lg:w-auto absolute pointer-events-none top-1/2 left-0 mix-blend-hard-light -z-10"
+        />
+        <img
+          src={star1}
+          aria-hidden="true"
+          className="w-[3vw] lg:w-auto absolute pointer-events-none bottom-4 right-48 mix-blend-hard-light -z-10"
+        />
+        <img src={faq_image} alt="" className="h-full w-[700px]" loading="lazy" />
+      </div>
+    </SectionContainer>
+  )
+}
+
+export default Faqs

@@ -1,14 +1,14 @@
-import { Link } from 'react-router-dom';
-import chain from '../assets/images/home/chain.svg';
-import curve from '../assets/images/home/curve.svg';
-import fire from '../assets/images/home/fire.svg';
-import guy from '../assets/images/home/guy-wearing-vr.svg';
-import lightbulb from '../assets/images/home/lightbulb.svg';
-import spark from '../assets/images/home/spark.svg';
-import star1 from '../assets/images/home/star1.svg';
-import star2 from '../assets/images/home/star2.svg';
-import flareRight from '../assets/images/home/flare-right.svg';
-import flareLeft from '../assets/images/home/flare-left.svg';
+import { Link } from 'react-router-dom'
+import chain from '../assets/images/home/chain.svg'
+import curve from '../assets/images/home/curve.svg'
+import fire from '../assets/images/home/fire.svg'
+import guy from '../assets/images/home/guy-wearing-vr.svg'
+import lightbulb from '../assets/images/home/lightbulb.svg'
+import spark from '../assets/images/home/spark.svg'
+import star1 from '../assets/images/home/star1.svg'
+import star2 from '../assets/images/home/star2.svg'
+import flareRight from '../assets/images/home/flare-right.svg'
+import flareLeft from '../assets/images/home/flare-left.svg'
 
 const Hero = () => {
   return (
@@ -61,7 +61,7 @@ const Hero = () => {
       </div>
         <div className="grid lg:grid-cols-2 pt-8 lg:pt-16 !px-0 lg:!pl-12">
           <header className="grid place-items-center gap-3 lg:place-items-start lg:flex flex-col lg:gap-5 pb-8">
-            <div className="grid place-items-center text-center lg:text-left lg:block clash-display text-white text-[32px] lg:text-[80px] font-bold lg:leading-[98px] relative z-2 tracking-tight">
+            <div className="mt-40 grid place-items-center text-center lg:text-left lg:block clash-display text-white text-[32px] lg:text-[80px] font-semibold lg:leading-[87px] relative z-2 tracking-tight">
               <div className="relative">
                 <h1>
                   getlinked{``}
@@ -94,8 +94,8 @@ const Hero = () => {
               </h2>
             </div>
             <p className="text-[13px] lg:text-[20px] lg:mb-5 text-white text-center lg:text-left max-w-[264px] lg:max-w-none relative z-2">
-              Participate in getlinked tech Hackathon 2023 stand a chance to win
-              a Big prize
+              Participate in getlinked tech Hackathon 2023 stand a chance to win a Big
+              prize
             </p>
             <Link
               to="/register"
@@ -131,7 +131,7 @@ const Hero = () => {
           </figure>
         </div>
     </section>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero
